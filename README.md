@@ -1,6 +1,6 @@
 # Sistema Inteligente Anti-Robo.
 
-![siar_logo](https://github.com/AredAngel23/siar-web/blob/db5ef35176d5290b84cb4e53a618be885b4745ff/mysite/home/static/images/SIAR_LOGO.svg)
+![siar_logo](https://github.com/AredAngel23/siar-web/blob/f93550a63de37e59fe3a2952924c90ec76b9ed4d/mysite/home/static/images/SIAR_LOGO.svg)
 
 Repositorio oficial del sitio web de SIAR, el sistema antirrobo en IoT. Aquí encontrarás el código fuente, recursos y documentación necesaria para la implementación y despliegue de la plataforma web que presenta las características, tecnología, casos de uso y opciones de contacto para obtener el sistema. Contribuciones y sugerencias son bienvenidas.
 ## Requisitos
