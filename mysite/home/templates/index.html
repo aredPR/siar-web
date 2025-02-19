@@ -1,12 +1,13 @@
-{% load static %}
+{% load static tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIAR</title>
-    <link rel="stylesheet" href="{% static "styles.css" %}">
+    {% comment %} <link rel="stylesheet" href="{% static "styles.css" %}"> {% endcomment %}
     <link rel="icon" type="image/svg+xml" href="{% static 'images/SIAR_LOGO.svg' %}">
+    {% tailwind_css %}
 </head>
 <body>
     <h1>SIAR Web</h1>

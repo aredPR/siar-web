@@ -19,5 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('home.urls')) #Incluimos los paths que tengan otros archivos a este que es el principal
+    path('', include('home.urls')), #Incluimos los paths que tengan otros archivos a este que es el principal
+    path("__reload__/", include("django_browser_reload.urls")),
 ]
