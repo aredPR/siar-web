@@ -1,19 +1,51 @@
 {% load static tailwind_tags %}
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-    <title>Django Tailwind</title>
-		<meta charset="UTF-8">
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+	    <meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		{% tailwind_css %}
-	</head>
+</head>
+<body>
+    <header>
+        <nav class="bg-white shadow-lg">
+			<div class="max-w-7xl mx-auto px-4">
+			  <div class="flex justify-between items-center h-16">
+				<!-- Logo -->
+				<a href="#" class="text-2xl font-bold text-blue-600">SIAR</a>
+		  
+				<!-- Menú principal -->
+				<div class="hidden md:flex space-x-8">
+				  <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Inicio</a>
+				  <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Producto</a>
+				  <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Nosotros</a>
+				  <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">FAQ</a>
+				</div>
+		  
+				<!-- Botones de acción -->
+				<div class="flex items-center space-x-4">
+				  <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+					Registrarse
+				  </a>
+				  <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">
+					Iniciar Sesión
+				  </a>
+				</div>
+			  </div>
+			</div>
+		  </nav>
+    </header>
 
-	<body class="bg-gray-50 font-serif leading-normal tracking-normal">
-		<div class="container mx-auto">
-			<section class="flex items-center justify-center h-screen">
-				<h1 class="text-5xl">Django + Tailwind = ❤️</h1>
-			</section>
-		</div>
-	</body>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2025 - Todos los derechos reservados</p>
+    </footer>
+</body>
 </html>
+

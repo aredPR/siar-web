@@ -1,17 +1,13 @@
-{% load static tailwind_tags %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIAR</title>
-    {% comment %} <link rel="stylesheet" href="{% static "styles.css" %}"> {% endcomment %}
-    <link rel="icon" type="image/svg+xml" href="{% static 'images/SIAR_LOGO.svg' %}">
-    {% tailwind_css %}
-</head>
-<body>
-    <h1>SIAR Web</h1>
-    
-    <script src="{% static "index.js" %}"></script>
+{% extends "base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<body class="bg-gray-50 font-serif leading-normal tracking-normal">
+    <div class="container mx-auto">
+        <section class="flex items-center justify-center h-screen">
+            <h1 class="text-5xl">Django + Tailwind = ❤️</h1>
+        </section>
+    </div>
 </body>
-</html>
+{% endblock %}
