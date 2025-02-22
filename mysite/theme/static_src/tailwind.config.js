@@ -42,7 +42,15 @@ module.exports = {
         // '../../**/*.py'
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                // Colorimetría de SIAR
+                primary: "#264653",
+                secondary: "#357F83",
+                color3: "#156082",
+                color3: "#F4EAE0",
+            }
+        },
     },
     plugins: [
         /**

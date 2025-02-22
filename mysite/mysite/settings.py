@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     # Apps Propias
-    'home'
+    'home',
     #'home.apps.HomeConfig',
     # Configuración Tailwind
     'tailwind',
