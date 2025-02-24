@@ -4,47 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
-	    <meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		{% tailwind_css %}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	{% tailwind_css %}
 </head>
 <body>
     <header>
-        <nav class="bg-white shadow-lg">
-			<div class="max-w-7xl mx-auto px-4">
-			  <div class="flex justify-between items-center h-16">
-				<!-- Logo -->
-				<a href="#" class="text-2xl font-bold text-primary">SIAR</a>
-		  
-				<!-- Menú principal -->
-				<div class="hidden md:flex space-x-8">
-				  <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Inicio</a>
-				  <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Producto</a>
-				  <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Nosotros</a>
-				  <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">FAQ</a>
-				</div>
-		  
-				<!-- Botones de acción -->
-				<div class="flex items-center space-x-4">
-				  <a href="#" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-					Registrarse
+		<nav class="rounded-3xl shadow-lg">
+		  <div class="max-w-7xl mx-auto px-4">
+			<div class="flex justify-between items-center h-16">
+			  <!-- Logo -->
+			  <a href="{% url 'main:home'%}" class="text-2xl font-bold text-primary">SIAR</a>
+	  
+			  <!-- Menú principal -->
+			  <div class="hidden md:flex space-x-8 items-center">
+				<a href="{% url 'main:home'%}" class="text-primary font-semibold hover:opacity-80 transition">Inicio</a>
+	  
+				<!-- Menú con submenú en Acerca de -->
+				<div class="relative group">
+				  <a href="#" class="text-primary font-semibold hover:opacity-70 transition inline-flex items-center">
+					Acerca de
+					<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+					</svg>
 				  </a>
-				  <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">
-					Iniciar Sesión
-				  </a>
+				  <!-- Submenú -->
+				  <div class="absolute left-0 mt-2 w-40 bg-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-10">
+					<a href="#" class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white transition">Producto</a>
+					<a href="#" class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white transition">Casos de Uso</a>
+					<a href="#" class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white transition">Tecnología</a>
+				  </div>
 				</div>
+	  
+				<a href="{% url 'main:nosotros' %}" class="text-primary font-semibold hover:opacity-70 transition">Nosotros</a>
+				<a href="#" class="text-primary font-semibold hover:opacity-70 transition">FAQ</a>
+			  </div>
+	  
+			  <!-- Botones de acción -->
+			  <div class="flex items-center space-x-4">
+				<a href="#" class="bg-primary text-white px-5 py-2 rounded-lg font-semibold hover:bg-opacity-80 transition">
+				  Acceder
+				</a>
 			  </div>
 			</div>
-		  </nav>
-    </header>
+		  </div>
+		</nav>
+	  </header>
+	  
 
     <main>
         {% block content %}{% endblock %}
     </main>
 
     <footer>
-        <p>© 2025 - Todos los derechos reservados</p>
+        <footer class="bg-primary py-12">
+			<div class="container mx-auto px-4">
+				<div class="text-center text-white">
+					<p>© 2024 RFID IoT Security System. All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
     </footer>
 </body>
 </html>
