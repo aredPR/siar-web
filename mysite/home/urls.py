@@ -8,6 +8,7 @@ urlpatterns = [
     # Así si cambiamos la ruta de "/" a hola/ el nombre seguira indicando la ruta
     path('', views.HomeView, name="home"), # Ruta principal Home
     path('Nosotros/', views.ContactView, name="nosotros"),
+    path('Tecnologia/', views.TecnologiaView, name="tecnologia"),
     path('AcercaDe/Producto', views.ProductView, name="producto"),
     path('AcercaDe/PreguntasFrecuentes', views.FaqView, name="faq"),  
 ]

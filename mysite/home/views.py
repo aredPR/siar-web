@@ -17,3 +17,7 @@ def ContactView(request):
 def FaqView(request):
     '''Nosotros y Contacto'''
     return render(request, "about/faq.html")
+
+def TecnologiaView(request):
+    '''Tecnologia'''
+    return render(request, "tecnologia.html")
