@@ -10,40 +10,45 @@
 	{% tailwind_css %}
 </head>
 <body>
-    <header>
-		<nav class="rounded-3xl shadow-lg">
-		  <div class="max-w-7xl mx-auto px-4">
-			<div class="flex justify-between items-center h-16">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white">
+		<nav class="rounded-3xl shadow-md">
+		  <div class="max-w-7xl mx-auto">
+			<div class="flex justify-between items-center h-14">
 			  <!-- Logo -->
-			  <a href="{% url 'main:home'%}" class="text-2xl font-bold text-primary">SIAR</a>
+			  <a href="{% url 'main:home' %}" class="flex items-center">
+				<!-- Logo SVG -->
+				<img src="{% static 'images/logo3.svg' %}" alt="Logo SIAR" class="w-14">
+				<!-- Texto -->
+				<span class="text-xl font-bold text-primary">SIAR</span>
+			  </a>
 	  
 			  <!-- Menú principal -->
 			  <div class="hidden md:flex space-x-8 items-center">
-				<a href="{% url 'main:home'%}" class="text-primary font-semibold hover:opacity-80 transition">Inicio</a>
+				<a href="{% url 'main:home'%}" class="text-primary font-semibold hover:opacity-90 transition">Inicio</a>
 	  
 				<!-- Menú con submenú en Acerca de -->
 				<div class="relative group">
-				  <a href="#" class="text-primary font-semibold hover:opacity-70 transition inline-flex items-center">
+				  <a href="#" class="text-primary font-semibold hover:opacity-90 transition inline-flex items-center">
 					Acerca de
 					<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 					</svg>
 				  </a>
 				  <!-- Submenú -->
-				  <div class="absolute left-0 mt-2 w-40 bg-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-10">
-					<a href="#" class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white transition">Producto</a>
+				  <div class="absolute left-0 mt-2 w-40 bg-white rounded-2xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-10">
+					<a href="{% url "main:producto" %}" class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white transition">Producto</a>
 					<a href="#" class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white transition">Casos de Uso</a>
 					<a href="#" class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white transition">Tecnología</a>
 				  </div>
 				</div>
 	  
-				<a href="{% url 'main:nosotros' %}" class="text-primary font-semibold hover:opacity-70 transition">Nosotros</a>
-				<a href="#" class="text-primary font-semibold hover:opacity-70 transition">FAQ</a>
+				<a href="{% url 'main:nosotros' %}" class="text-primary font-semibold hover:opacity-90 transition">Nosotros</a>
+				<a href="#" class="text-primary font-semibold hover:opacity-90 transition">FAQ</a>
 			  </div>
 	  
 			  <!-- Botones de acción -->
 			  <div class="flex items-center space-x-4">
-				<a href="#" class="bg-primary text-white px-5 py-2 rounded-lg font-semibold hover:bg-opacity-80 transition">
+				<a href="#" class="bg-primary text-white px-5 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">
 				  Acceder
 				</a>
 			  </div>
@@ -53,7 +58,7 @@
 	  </header>
 	  
 
-    <main>
+    <main class="pt-16">
         {% block content %}{% endblock %}
     </main>
 
