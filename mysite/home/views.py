@@ -13,3 +13,7 @@ def ProductView(request):
 def ContactView(request):
     '''Nosotros y Contacto'''
     return render(request, "nosotros.html")
+
+def FaqView(request):
+    '''Nosotros y Contacto'''
+    return render(request, "about/faq.html")

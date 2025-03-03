@@ -9,4 +9,5 @@ urlpatterns = [
     path('', views.HomeView, name="home"), # Ruta principal Home
     path('Nosotros/', views.ContactView, name="nosotros"),
     path('AcercaDe/Producto', views.ProductView, name="producto"),
+    path('AcercaDe/PreguntasFrecuentes', views.FaqView, name="faq"),  
 ]
