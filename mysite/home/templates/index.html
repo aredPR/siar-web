@@ -4,17 +4,24 @@
 {% block title %}Inicio{% endblock %}
 
 {% block content %}
-<!-- Hero Section -->
+<!--  Sección Principal -->
 <section class="relative min-h-screen flex items-center">
-    <div class="container mx-auto px-20 py-16">
+    <div class="container mx-auto px-20">
         <div class="grid md:grid-cols-2 gap-8 items-center">
             <div>
                 <h1 class="text-6xl font-bold text-primary mb-6">Sistema Inteligente Anti-Robo</h1>
                 <p class="text-2xl text-primary mb-8">Protección inteligente en tiempo real <br> "Siempre alerta, siempre seguro."</p>
                 <div class="flex gap-8">
-                    <button class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-opacity-80 transition">Obtener</button>
-                    <button class="border-2 border-primary text-primary px-6 py-3 rounded-lg font-bold hover:bg-cyan-50 transition">
-                        Leer más
+                    <a 
+                    href="{% url "main:nosotros" %}" 
+                    class="bg-primary text-white px-8 py-3 rounded-lg font-bold transition transform hover:scale-105 hover:shadow-lg">
+                    Obtener
+                    </a>
+                    <!-- Botón "Leer más" -->
+                    <button 
+                    onclick="scrollToSection()" 
+                    class="border-2 border-primary text-primary px-6 py-3 rounded-lg font-bold transition transform hover:scale-105 hover:shadow-lg">
+                    Leer más
                     </button>
                 </div>
             </div>
@@ -30,8 +37,8 @@
     </div>
 </section>
 
-<!-- ¿Qué es? Section -->
-<section class="min-h-screen flex items-center py-10 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-background to-secondary/10">
+<!-- Sección ¿Qué es? -->
+<section id="que-es" class="min-h-screen flex items-center py-10 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-background to-secondary/10">
     <div class="max-w-7xl mx-auto">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div class="relative group">
@@ -44,11 +51,12 @@
             </div>
             <div class="space-y-8">
                 <div class="space-y-8">
-                    <h1 class="text-4xl sm:text-5xl font-heading font-semibold text-primary">
+                    <h1 class="text-4xl font-bold text-center text-primary">
                         ¿Qué es SIAR?
                     </h1>
-                    <p class="text-2xl text-primary max-w-2xl">
-                        SIAR es un sistema IoT que utiliza tecnología RFID para prevenir robos en diferentes tipos de establecimientos de venta u otros propósitos. Funciona con llaveros RFID adheridos a los bienes y un lector que detecta si un artículo intenta salir del establecimiento; si el llavero no se desactiva o retira, el sistema activa una alarma y se envía una notificación a la aplicación móvil para alertar al personal y encargados del lugar.
+                    <p class="text-2xl text-primary max-w-2xl text-justify hyphens-auto">
+                        SIAR es un sistema IoT que utiliza tecnología RFID para prevenir robos en diferentes tipos de establecimientos de venta u otros propósitos. 
+                        <br> <br> El sistema funciona con llaveros RFID adheridos a los bienes/productos y un lector que detecta si un artículo intenta salir del establecimiento; si el llavero no se desactiva o retira, el sistema activa una alarma y se envía una notificación a la aplicación móvil para alertar al personal y encargados del lugar.
                     </p>
                 </div>
             </div>
@@ -57,104 +65,102 @@
     </div>
 </section>
 
-<!-- Features Section -->
+<!-- Sección Características -->
 <section class="py-l5">
     <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-semibold text-center mb-16 text-primary">Características</h2>
+        <h2 class="text-4xl font-bold text-center mb-16 text-primary">Características</h2>
         <div class="grid md:grid-cols-4 gap-8">
-            <div class="bg-primary p-8 rounded-lg">
+            <div class="bg-primary p-8 rounded-lg transition transform hover:scale-105 hover:shadow-lg">
                 <div class="text-primary text-4xl mb-4">🔍</div>
                 <h3 class="text-white text-xl font-bold mb-3">Seguimiento en tiempo real</h3>
-                <p class="text-white">Utiliza tecnología RFID que identifica exactamente a los llaveros</p>
+                <p class="text-white">Utiliza tecnología RFID que identifica exactamente a los llaveros.</p>
             </div>
-            <div class="bg-primary p-8 rounded-lg">
+            <div class="bg-primary p-8 rounded-lg transition transform hover:scale-105 hover:shadow-lg">
                 <div class="text-primary text-4xl mb-4">⚡</div>
                 <h3 class="text-white text-xl font-bold mb-3">Alertas instantáneas</h3>
-                <p class="text-white">Envía notificaciones instantáneas a la app móvil y activa alarmas sonoras</p>
+                <p class="text-white">Envía notificaciones instantáneas a la app móvil y activa alarmas sonoras.</p>
             </div>
-            <div class="bg-primary p-8 rounded-lg">
+            <div class="bg-primary p-8 rounded-lg transition transform hover:scale-105 hover:shadow-lg">
                 <div class="text-primary text-4xl mb-4">📊</div>
-                <h3 class="text-white text-xl font-bold mb-3">Gestión Eficiente</h3>
-                <p class="text-white">La app facilita la revisión de alertas y muestra información relevate</p>
+                <h3 class="text-white text-xl font-bold mb-3">Gestión eficiente</h3>
+                <p class="text-white">La app facilita la revisión de alertas y muestra información relevate.</p>
             </div>
-            <div class="bg-primary p-8 rounded-lg">
+            <div class="bg-primary p-8 rounded-lg transition transform hover:scale-105 hover:shadow-lg">
                 <div class="text-primary text-4xl mb-4">🔄</div>
                 <h3 class="text-white text-xl font-bold mb-3">Registro en la Nube</h3>
-                <p class="text-white">La información de eventos se almacena para consultar historiales y analizar incidentes</p>
+                <p class="text-white">La información de eventos se almacena para consultar historiales y analizar incidentes.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- How It Works -->
+<!-- Sección ¿Cómo funciona? -->
 <section class="py-20">
     <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-semibold text-center mb-16 text-primary">¿Cómo funciona?</h2>
+        <h2 class="text-4xl font-bold text-center mb-16 text-primary">¿Cómo funciona?</h2>
         <div class="grid md:grid-cols-3 gap-8">
             <div class="text-center">
-                <div class="bg-primary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                <div class="bg-primary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 transition transform hover:scale-110 hover:shadow-lg">
                     <span class="text-3xl text-white">1</span>
                 </div>
                 <h3 class="text-xl font-bold mb-3">Instalación de SIAR</h3>
-                <p class="text-accent">Instala el sistema en un lugar conveniente</p>
+                <p class="text-accent">Instala el sistema en un lugar conveniente.</p>
             </div>
             <div class="text-center">
-                <div class="bg-primary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                <div class="bg-primary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 transition transform hover:scale-110 hover:shadow-lg">
                     <span class="text-3xl text-white">2</span>
                 </div>
                 <h3 class="text-xl font-bold mb-3">Colocación de llaveros RFID</h3>
-                <p class="text-accent">Coloque llaveros RFID en sus activos valiosos</p>
+                <p class="text-accent">Coloque llaveros RFID en sus activos valiosos.</p>
             </div>
             <div class="text-center">
-                <div class="bg-primary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                <div class="bg-primary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 transition transform hover:scale-110 hover:shadow-lg">
                     <span class="text-3xl text-white">3</span>
                 </div>
                 <h3 class="text-xl font-bold mb-3">Activación de la app móvil</h3>
-                <p class="text-accent">Configura la aplicación con tu sistema</p>
+                <p class="text-accent">Configura la aplicación con tu sistema.</p>
             </div>
         </div>
         <div class="mt-10 flex justify-center">
-            <button class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-opacity-80 transition">
-                Más información
-            </button>
+            <a 
+            href="{% url "main:producto" %}" 
+            class="bg-primary text-white px-6 py-3 rounded-lg font-bold transition transform hover:scale-105 hover:shadow-lg">
+                Más detalles
+            </a>
         </div>
     </div>
 </section>
 
-<!-- App -->
+<!-- Sección App -->
 <section class="container mx-auto px-4 py-15">
-    <div class="flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-primary to-secondary rounded-xl p-8 shadow-lg">
+    <div class="flex flex-col md:flex-row items-center justify-between bg-primary rounded-xl p-8 shadow-lg">
         <div class="md:w-1/2 text-white mb-8 md:mb-0">
             <div class="flex items-center mb-10">
-                <img src="https://images.unsplash.com/photo-1609081219090-a6d81d3085bf" alt="App Icon" class="w-16 h-16 rounded-xl mr-4">
-                <h2 class="text-4xl font-semibold">Descargue nuestra aplicación móvil</h2>
+                <img src="{% static 'images/logo4.svg' %}" alt="Logo SIAR" class="w-16">
+                <h2 class="text-3xl font-bold">Descarga nuestra aplicación móvil</h2>
             </div>
-            <p class="text-xl mb-10">Obten el control total de SIAR: gestiona alertas, productos y más con la aplicación móvil. Descarga ya con los enlaces de abajo o escaneando el QR.</p>
+            <p class="text-xl mb-14">Obten el control total de SIAR: gestiona alertas, productos y más con la aplicación móvil. Descarga ya con los enlaces de abajo o escaneando el QR.</p>
             <div class="flex flex-wrap gap-4">
-                <img src="https://images.unsplash.com/photo-1609081219091-770275386371" alt="App Store" class="h-12 cursor-pointer hover:opacity-90 transition-opacity">
-                <img src="https://images.unsplash.com/photo-1609081219092-770275386372" alt="Play Store" class="h-12 cursor-pointer hover:opacity-90 transition-opacity">
+                <img src="{% static "images/google-play.png" %}" alt="Play Store" class="h-6 cursor-pointer hover:opacity-90 transition-opacity">Play Store
             </div>
         </div>
         <div class="md:w-1/3 flex flex-col items-center bg-white p-6 rounded-lg shadow-sm">
             <img src="https://images.unsplash.com/photo-1609081219093-770275386373" alt="QR Code to download app" class="w-48 h-48 mb-4 hover:scale-105 transition-transform">
-            <p class="text-body text-center">Escanee el código QR para descargar</p>
-            <button class="mt-4 bg-primary text-white font-semibold px-6 py-2 rounded-full hover:bg-secondary/90 transition-colors">
-                Descarga directa
-            </button>
+            <p class="text-body text-center">Escanee el código QR para descargar.</p>
         </div>
     </div>
 </section>
 
-<!-- Testimonios -->
+<!-- Sección Testimonios -->
  <section class="py-20 px-4 md:px-8 lg:px-16">
         <div class="max-w-8xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-semibold mb-8 text-primary">¿Qué dicen nuestros clientes?</h2>
-                <p class="text-xl max-w-2xl mx-auto">Experiencias reales de clientes que confían en nuestras soluciones de seguridad</p>
+                <p class="text-xl max-w-2xl mx-auto">Experiencias reales de clientes que confían en nuestras soluciones de seguridad.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-colorF2 p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <div class="bg-colorF2 p-6 rounded-lg shadow-sm hover:shadow-lg transition transform hover:scale-105 hover:shadow-lg">
                     <div class="flex items-center mb-4">
                         <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb" alt="Sarah Mitchell" class="w-16 h-16 rounded-full object-cover">
                         <div class="ml-4">
@@ -172,7 +178,7 @@
                     <p class="text-foreground mb-4">"The anti-theft system has given me complete peace of mind. The installation was seamless and the 24/7 monitoring is exceptional. I feel much safer in my home now."</p>
                 </div>
 
-                <div class="bg-colorF2 p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <div class="bg-colorF2 p-6 rounded-lg shadow-sm hover:shadow-lg transition transform hover:scale-105 hover:shadow-lg">
                     <div class="flex items-center mb-4">
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" alt="John Cooper" class="w-16 h-16 rounded-full object-cover">
                         <div class="ml-4">
@@ -190,7 +196,7 @@
                     <p class="text-foreground mb-4">"As a business owner, security is paramount. This system has protected my store effectively and the customer service is outstanding."</p>
                 </div>
 
-                <div class="bg-colorF2 p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <div class="bg-colorF2 p-6 rounded-lg shadow-sm hover:shadow-lg transition transform hover:scale-105 hover:shadow-lg">
                     <div class="flex items-center mb-4">
                         <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80" alt="Emma Wilson" class="w-16 h-16 rounded-full object-cover">
                         <div class="ml-4">
@@ -210,4 +216,6 @@
             </div>
         </div>
     </section>
+
+    <script src="{% static 'js/main.js' %}"></script>
 {% endblock %}

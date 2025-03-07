@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Producto{% endblock %}
+
+{% block content %}
+<body class="bg-gray-100 text-gray-800">
+    <div class="max-w-6xl mx-auto p-6">
+        <h1 class="text-3xl font-bold text-center mb-8">¿Cómo Funciona el Sistema?</h1>
+        
+        <!-- Implementación Física -->
+        <div class="bg-white p-6 rounded-2xl shadow-md mb-6">
+            <h2 class="text-2xl font-semibold mb-4">Implementación Física</h2>
+            <p class="text-gray-600">Para instalar el sistema en tu negocio, sigue estos pasos:</p>
+            <ul class="list-disc pl-5 mt-3 text-gray-600">
+                <li>Adherir los llaveros RFID a los bienes o productos.</li>
+                <li>Instalar el lector RFID en las salidas del establecimiento.</li>
+                <li>Configurar la conexión del lector con la aplicación móvil.</li>
+                <li>Realizar pruebas para garantizar su correcto funcionamiento.</li>
+            </ul>
+        </div>
+        
+        <!-- Descarga Manual de Usuario -->
+        <div class="bg-white p-6 rounded-2xl shadow-md mb-6">
+            <h2 class="text-2xl font-semibold mb-4">Descarga del Manual de Usuario</h2>
+            <p class="text-gray-600">En el manual de usuario encontrarás información detallada sobre:</p>
+            <ul class="list-disc pl-5 mt-3 text-gray-600">
+                <li>Requisitos previos para la instalación.</li>
+                <li>Guía de uso del sistema.</li>
+                <li>Solución de problemas y preguntas frecuentes.</li>
+            </ul>
+            <a href="#" class="text-blue-500 font-semibold mt-3 inline-block">Descargar Manual →</a>
+        </div>
+        
+        <!-- Términos y Condiciones -->
+        <div class="bg-white p-6 rounded-2xl shadow-md mb-6">
+            <h2 class="text-2xl font-semibold mb-4">Términos y Condiciones</h2>
+            <p class="text-gray-600">Lee atentamente los términos y condiciones antes de utilizar el sistema.</p>
+            <a href="#" class="text-blue-500 font-semibold mt-3 inline-block">Leer más →</a>
+        </div>
+        
+        <!-- Ventajas Competitivas -->
+        <div class="mb-6">
+            <h2 class="text-2xl font-semibold mb-4">Ventajas Competitivas</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition transform hover:scale-105 text-center">
+                    <img src="https://via.placeholder.com/100" alt="Seguridad" class="mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">Seguridad Reforzada</h3>
+                    <p class="text-gray-600">Detección en tiempo real de intentos de robo.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition transform hover:scale-105 text-center">
+                    <img src="https://via.placeholder.com/100" alt="Notificaciones" class="mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">Notificaciones Instantáneas</h3>
+                    <p class="text-gray-600">Alertas en tiempo real a la aplicación móvil.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition transform hover:scale-105 text-center">
+                    <img src="https://via.placeholder.com/100" alt="Historial" class="mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">Historial de Eventos</h3>
+                    <p class="text-gray-600">Accede a un registro detallado de todas las alertas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}
