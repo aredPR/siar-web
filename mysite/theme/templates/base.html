@@ -17,13 +17,21 @@
 		  <div class="max-w-7xl mx-auto">
 			<div class="flex justify-between items-center h-14">
 			  <!-- Logo -->
-			  <a href="{% url 'main:home' %}" class="flex items-center">
-				<!-- Logo SVG -->
-				<img src="{% static 'images/logo3.svg' %}" alt="Logo SIAR" class="w-14">
-				<!-- Texto -->
-				<span class="text-xl font-bold text-primary">SIAR</span>
+			  <div class="flex items-center justify-between">
+			  <a href="{% url 'main:home' %}" class="flex items-center group">
+				<!-- Logo Container with Animation -->
+				<div class="relative w-16 h-16 logo-container">
+						<img src="{% static 'images/logo3.svg' %}"
+							 alt="Logo SIAR">
+						
+				</div>
 			  </a>
-	  
+
+				<!-- Additional SIAR text with animation -->
+				<div class="ml-4">
+					<span class="text-2xl font-bold text-primary animated-text">SIAR</span>
+				  </div>
+				</div>
 			  <!-- Menú principal -->
 			  <div class="hidden md:flex space-x-8 items-center">
 				<a href="{% url 'main:home'%}" class="text-primary font-semibold hover:opacity-90 transition">Inicio</a>
@@ -35,7 +43,7 @@
 					<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 					</svg>
-				  </a>
+				</a>
 				  <!-- Submenú -->
 				  <div class="absolute left-0 mt-2 w-40 bg-white rounded-2xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-10">
 					<a href="{% url "main:producto" %}" class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white transition">Producto</a>
@@ -43,19 +51,24 @@
 					<a href="{% url "main:tecnologia" %}" class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white transition">Tecnología</a>
 				  </div>
 				</div>
+					<a href="{% url 'main:producto' %}" class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white transition">Producto</a>
+					<a href="{% url 'main:casouso' %}" class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white transition">Casos de Uso</a>
+					<a href="#" class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white transition">Tecnología</a>
+			  </div>
+			</div>
 	  
 				<a href="{% url 'main:nosotros' %}" class="text-primary font-semibold hover:opacity-90 transition">Nosotros</a>
-				<a href="{% url "main:faq" %}" class="text-primary font-semibold hover:opacity-90 transition">Preguntas Frecuentes</a>
-			  </div>
+				<a href="{% url 'main:faq' %}" class="text-primary font-semibold hover:opacity-90 transition">Preguntas Frecuentes</a>
+		  </div>
 	  
 			  <!-- Botones de acción -->
 			  <div class="flex items-center space-x-4">
-				<a href="#" class="bg-primary text-white px-5 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">
+				<a href="{% url 'main:acceder' %}" class="bg-primary text-white px-5 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">
 				  Acceder
 				</a>
 			  </div>
+				</div>
 			</div>
-		  </div>
 		</nav>
 	  </header>
 	  
@@ -63,7 +76,6 @@
     <main class="pt-16">
         {% block content %}{% endblock %}
     </main>
-
     <footer>
         <footer class="bg-primary py-12">
 			<div class="container mx-auto px-4">
@@ -71,8 +83,9 @@
 					<p>© 2024 RFID IoT Security System. All rights reserved.</p>
 				</div>
 			</div>
-		</footer>
+    </footer>
     </footer>
 </body>
 </html>
+
 
