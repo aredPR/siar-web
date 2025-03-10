@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Tecnología SIAR{% endblock %}
+
+{% block content %}
+<body class="bg-gray-50">
+    <div class="container mx-auto px-4 py-12">
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-12">Conoce los componentes que hacen funcionar a SIAR</h1>
+
+        <!-- Contenedor Grid para Hardware y Software lado a lado -->
+        <div class="grid md:grid-cols-2 gap-8">
+            
+            <!-- Barra Desplegable de Hardware -->
+            <div>
+                <button onclick="toggleSection('hardware-section')" class="w-full text-3xl font-semibold text-blue-600 bg-blue-100 py-4 px-6 rounded-lg hover:bg-blue-200 focus:outline-none transition-colors">Hardware</button>
+                <div id="hardware-section" class="hidden mt-4 space-y-6">
+                    <!-- Llaveros RFID -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 mb-6 hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl font-semibold text-blue-600 mb-4">Llaveros RFID</h3>
+                        <p class="text-gray-600">Llaveros RFID para colocar en los productos, cada uno con un identificador único.</p>
+                    </div>
+
+                    <!-- Lector RFID -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 mb-6 hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl font-semibold text-blue-600 mb-4">Lector RFID</h3>
+                        <p class="text-gray-600">Módulo lector RFID (como el RC522) compatible con Arduino para detectar las etiquetas RFID.</p>
+                    </div>
+
+                    <!-- Arduino Uno -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 mb-6 hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl font-semibold text-blue-600 mb-4">Arduino Uno</h3>
+                        <p class="text-gray-600">Microcontrolador para procesar la información del lector RFID y comunicarse con otros dispositivos.</p>
+                    </div>
+
+                    <!-- Buzzer Activo -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 mb-6 hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl font-semibold text-blue-600 mb-4">Buzzer Activo</h3>
+                        <p class="text-gray-600">Para generar alertas locales inmediatas cuando se detecte un producto no autorizado.</p>
+                    </div>
+
+                    <!-- Módulo de Comunicación -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 mb-6 hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl font-semibold text-blue-600 mb-4">Módulo de Comunicación</h3>
+                        <p class="text-gray-600">ESP8266 (Wifi) o HC-05/HC-06 (Bluetooth) para enviar los datos desde el Arduino a la app móvil o al servidor.</p>
+                    </div>
+
+                    <!-- Fuente de Alimentación -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 mb-6 hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl font-semibold text-blue-600 mb-4">Fuente de Alimentación</h3>
+                        <p class="text-gray-600">Adaptador o batería para alimentar el Arduino y sus componentes.</p>
+                    </div>
+
+                    <!-- Cables y Protoboard -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 mb-6 hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl font-semibold text-blue-600 mb-4">Cables y Protoboard</h3>
+                        <p class="text-gray-600">Para realizar las conexiones entre el Arduino, el lector RFID y otros módulos.</p>
+                    </div>
+
+                    <!-- Smartphone -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 mb-6 hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl font-semibold text-blue-600 mb-4">Smartphone</h3>
+                        <p class="text-gray-600">Dispositivo móvil con la aplicación instalada para recibir alertas y gestionar los datos.</p>
+                    </div>
+
+                    <!-- Sensor ultrasónico HC-SRO4 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 mb-6 hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl font-semibold text-blue-600 mb-4">Sensor ultrasónico HC-SRO4</h3>
+                        <p class="text-gray-600">Será utilizado para medir la distancia del equipo de trabajo.</p>
+                    </div>
+
+                    <!-- Módulo Relay - Relé 1 con Diodo 5V -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 mb-6 hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl font-semibold text-blue-600 mb-4">Módulo Relay - Relé 1 con Diodo 5V</h3>
+                        <p class="text-gray-600">Este módulo se activa con 5V de corriente continua para activar la corriente alterna.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Barra Desplegable de Software -->
+            <div>
+                <button onclick="toggleSection('software-section')" class="w-full text-3xl font-semibold text-green-600 bg-green-100 py-4 px-6 rounded-lg hover:bg-green-200 focus:outline-none transition-colors">Software</button>
+                <div id="software-section" class="hidden mt-4 space-y-6">
+                    <!-- Arduino IDE -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 mb-6 hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl font-semibold text-green-600 mb-4">Arduino IDE</h3>
+                        <p class="text-gray-600">Para programar el código del Arduino, gestionando el módulo RFID y la comunicación con la app.</p>
+                    </div>
+
+                    <!-- Bibliotecas RFID -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 mb-6 hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl font-semibold text-green-600 mb-4">Bibliotecas RFID</h3>
+                        <p class="text-gray-600">Librerías como MFRC522.h para controlar el lector RFID y leer etiquetas.</p>
+                    </div>
+
+                    <!-- Flutter -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 mb-6 hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl font-semibold text-green-600 mb-4">Flutter</h3>
+                        <p class="text-gray-600">Framework multiplataforma para desarrollar la aplicación móvil en Android.</p>
+                    </div>
+
+                    <!-- Firebase -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 mb-6 hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl font-semibold text-green-600 mb-4">Firebase</h3>
+                        <p class="text-gray-600">Base de datos en la nube para almacenar los datos en tiempo real.</p>
+                    </div>
+
+                    <!-- Web (Python/Django) -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 mb-6 hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl font-semibold text-green-600 mb-4">Web (Python/Django)</h3>
+                        <p class="text-gray-600">Framework web del lenguaje de programación Python para el desarrollo de la página web informativa.</p>
+                    </div>
+
+                    <!-- App Móvil -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 mb-6 hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl font-semibold text-green-600 mb-4">App Móvil</h3>
+                        <p class="text-gray-600">Aplicación móvil disponible para el sistema operativo Android.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section.classList.contains('hidden')) {
+                section.classList.remove('hidden');
+            } else {
+                section.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+{% endblock %}

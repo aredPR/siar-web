@@ -1,3 +1,4 @@
 django==5.1.6
 django-tailwind==3.8.0
 django_browser_reload==1.18.0
+django-allauth==0.61.0
