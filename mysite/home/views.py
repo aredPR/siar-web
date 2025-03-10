@@ -19,6 +19,7 @@ def FaqView(request):
 def TecnologiaView(request):
     '''Tecnologia'''
     return render(request, "tecnologia.html")
+
 def LoginView(request):
     '''Iniciar Sesión'''
     return render(request, "login.html")
@@ -38,7 +39,7 @@ def CasoUso(request):
             'Tiendas de Tecnología y Electrónica'
             'Productores y Distribuidores Locales de Alimentos',
             
-            'image': 'images/retail.jpg'
+            'image': 'images/casos-uso/retail.jpg'
         },
         {
             'title': 'Almacenes y centros de distribución',
@@ -52,7 +53,7 @@ def CasoUso(request):
             'Centros de Distribución de Videojuegos y Accesorios',
 
             
-            'image': 'images/warehouse.jpg'
+            'image': 'images/casos-uso/warehouse.jpg'
         },
         {
             'title': 'Espacios sociales',
@@ -65,7 +66,7 @@ def CasoUso(request):
             'Centros de Convenciones'
             'Cines y Espacios para Estrenos',
 
-            'image': 'images/mall.jpg'
+            'image': 'images/casos-uso/mall.jpg'
         },
         {
             'title': 'Espacios institucionales',
@@ -80,7 +81,7 @@ def CasoUso(request):
             'Organismos Internacionales y ONGs'
             'Centros Culturales y Museos',
             
-            'image': 'images/museum.jpg'
+            'image': 'images/casos-uso/museum.jpg'
         },
         {
             'title': 'Entornos empresariales',
@@ -95,7 +96,7 @@ def CasoUso(request):
             'Espacios de Co-working'
             'Empresas de Servicios Profesionales',
             
-            'image': 'images/office.jpg'
+            'image': 'images/casos-uso/office.jpg'
         }
     ]
     return render(request, "about/casouso.html", {'use_cases': use_cases})
