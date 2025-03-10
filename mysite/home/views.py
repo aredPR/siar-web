@@ -27,28 +27,74 @@ def CasoUso(request):
     '''Casos de Uso'''
     use_cases = [
         {
-            'title': 'Tiendas minoristas y Comercios',
-            'description': 'Instala lectores RFID en la entrada/salida de tu tienda para detectar salidas no autorizadas de productos. Ideal para papelerías, boutiques, tiendas de electrónica y más.',
+            'title': 'PYMEs',
+            
+            'description': 'Restaurantes y Cafeterías'
+            "Tiendas de Ropa, Calzado y GYM's"
+            'Talleres de Reparación'
+            'Estudios de Diseño y Publicidad'
+            'Salones de Belleza'
+            'Tiendas de Fármacos'
+            'Tiendas de Tecnología y Electrónica'
+            'Productores y Distribuidores Locales de Alimentos',
+            
             'image': 'images/retail.jpg'
         },
         {
-            'title': 'Almacenes y Centros de Distribución',
-            'description': 'Monitoreo del movimiento de inventario en entradas y salidas para asegurar que los productos no sean retirados sin autorización.',
+            'title': 'Almacenes y centros de distribución',
+            
+            'description': 'Almacenes de Ropa y Textiles'  
+            'Distribuidores de Materiales de Construcción'
+            'Centros de Distribución de Alimentos Frescos' 
+            'Almacenes de Libros y Material Educativo' 
+            'Almacenes de Productos Cosméticos y de Higiene' 
+            'Distribuidores de Bebidas y Alimentos Procesados' 
+            'Centros de Distribución de Videojuegos y Accesorios',
+
+            
             'image': 'images/warehouse.jpg'
         },
         {
-            'title': 'Supermercados y Centros Comerciales',
-            'description': 'Control en puntos estratégicos de acceso, minimizando el hurto de mercancía en áreas de alto flujo.',
+            'title': 'Espacios sociales',
+            
+            'description': 
+            'Salas de Conciertos'
+            'Estadios y Arenas'
+            'Teatros y Auditorios'
+            'Carpas para Eventos y Festivales'
+            'Centros de Convenciones'
+            'Cines y Espacios para Estrenos',
+
             'image': 'images/mall.jpg'
         },
         {
-            'title': 'Exposiciones, Ferias y Museos',
-            'description': 'Protección de productos de alto valor o piezas en exhibición mediante lectores RFID que controlan su salida.',
+            'title': 'Espacios institucionales',
+                       
+            'description':
+            'Gobierno y Administración Pública'
+            'Instituciones de Salud y Clínicas'
+            'Instituciones Educativas y Universidades'
+            'Instituciones Judiciales y Tribunales'
+            'Instituciones Financieras y Bancos'
+            'Instituciones Corporativas y Oficinas'
+            'Organismos Internacionales y ONGs'
+            'Centros Culturales y Museos',
+            
             'image': 'images/museum.jpg'
         },
         {
-            'title': 'Oficinas y Entornos Empresariales',
-            'description': 'Supervisión de equipos y suministros costosos para prevenir robos internos.',
+            'title': 'Entornos empresariales',
+            
+            'description': 
+            'Oficinas Corporativas'
+            'Parques Empresariales'
+            'Zonas Industriales'
+            'Centros de Negocios'
+            'Empresas Tecnológicas y Startups'
+            'Centros de Innovación e Investigación'
+            'Espacios de Co-working'
+            'Empresas de Servicios Profesionales',
+            
             'image': 'images/office.jpg'
         }
     ]
