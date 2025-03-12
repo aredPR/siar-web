@@ -35,31 +35,33 @@
             </p>
             
             <!-- Use Case Cards -->
-            <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 justify-center mx-auto">
                 {% for case in use_cases %}
                 <!-- Flip Card Container -->
-                <div class="flip-card h-[300px] w-full perspective-1000">
+                <div class="flip-card h-[300px] w-full md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto perspective-1000">
                     <!-- Flip Card Inner Container -->
                     <div class="relative w-full h-full transition-transform duration-700 transform-style-3d hover:rotate-y-180">
                         <!-- Front Side -->
                         <div class="absolute w-full h-full backface-hidden">
-                            <img src="{% static case.image %}"
-                                 alt="{{ case.title }}"
+                            <img src="{% static case.image %}" 
+                                 alt="{{ case.title }}" 
                                  class="w-full h-full object-cover rounded-xl">
                         </div>
                         <!-- Back Side -->
                         <div class="absolute w-full h-full bg-white rounded-xl p-6 backface-hidden rotate-y-180 transform border-2 border-primary">
-                            <h3 class="text-lg font-bold text-primary mb-4 text-center">{{ case.title }}</h3>
-                        <p class="text-gray-600 text-sm text-justify">
-                                {{ case.description }}
-                        </p>
+                            <h3 class="text-xl font-bold text-primary mb-4 text-center">{{ case.title }}</h3>
+                            <ul class="list-disc p-4 text-gray-600 text-sm">
+                                {% for item in case.description %}
+                                    <li>{{ item }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                    </div>
                 {% endfor %}
-                    </div>
-                </div>
-                    </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- CTA Section -->

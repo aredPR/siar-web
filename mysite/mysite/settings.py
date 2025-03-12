@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
     # Apps Propias
     'home',
     #'home.apps.HomeConfig',
@@ -46,11 +45,30 @@ INSTALLED_APPS = [
     'tailwind',
     'theme',
     'django_browser_reload',
+    'social_django',
     'django.contrib.sites',  # Required for allauth
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'allauth.socialaccount.providers.google', #added for google
 ]
+
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.google.GoogleOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '557579110628-605tk049sj3ouuiipfatcea68b8ekvkl.apps.googleusercontent.com' #Replace with your key
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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' #Replace with your key
+
+
+SITE_ID = 1
+LOGIN_REDIRECT_URL = '/dashboard/'  # A dónde redirigir después de iniciar sesión
+ACCOUNT_LOGOUT_REDIRECT_URL = '/Acceder/'
+ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = True #to take next parameter into account
+
+
 
 TAILWIND_APP_NAME = 'theme'
 
@@ -77,7 +95,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR, 'theme', 'templates'], # Añadir la ruta global,
+        'DIRS': [BASE_DIR / 'templates'], # Añadir la ruta global,
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -145,4 +163,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-SITE_ID = 1
+LOGIN_URL = '/Acceder/'

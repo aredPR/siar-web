@@ -58,9 +58,16 @@
 	  
 			  <!-- Botones de acción -->
 			  <div class="flex items-center space-x-4">
-				<a href="{% url 'main:acceder' %}" class="bg-primary text-white px-5 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">
-				  Acceder
-				</a>
+				{% if request.user.is_authenticated %}
+                      <a href="{% url 'main:dashboard' %}" class="bg-primary text-white px-5 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">Dashboard</a>
+                      <!-- Change the next line -->
+                      <form method="post" action="{% url 'logout' %}">
+                          {% csrf_token %}
+                          <button type="submit" class="bg-primary text-white px-5 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">Cerrar Sesión</button>
+                      </form>
+              {% else %}
+                      <a href="{% url 'main:acceder' %}" class="bg-primary text-white px-5 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">Acceder</a>
+              {% endif %}
 			  </div>
 				</div>
 			</div>
