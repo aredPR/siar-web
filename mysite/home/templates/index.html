@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
+{% load comments_extras %}
 
 {% block title %}Inicio{% endblock %}
-
 {% block content %}
 <!--  Sección Principal -->
 <section class="relative min-h-screen flex items-center">
@@ -13,7 +13,7 @@
                 <p class="text-2xl text-primary mb-8">Protección inteligente en tiempo real <br> "Siempre alerta, siempre seguro."</p>
                 <div class="flex gap-8">
                     <a 
-                    href="{% url "main:nosotros" %}" 
+                    href="{% url "main:faq" %}" 
                     class="bg-primary text-white px-8 py-3 rounded-lg font-bold transition transform hover:scale-105 hover:shadow-lg">
                     Obtener
                     </a>
@@ -139,7 +139,7 @@
                 <img src="{% static 'images/logos/logo4.svg' %}" alt="Logo SIAR" class="w-16">
                 <h2 class="text-3xl font-bold">Descarga nuestra aplicación móvil</h2>
             </div>
-            <p class="text-xl mb-14">Obten el control total de SIAR: gestiona alertas, productos y más con la aplicación móvil. Descarga ya con los enlaces de abajo o escaneando el QR.</p>
+            <p class="text-xl mb-14">Obtén el control total de SIAR: gestiona alertas, productos y más con la aplicación móvil. ¡Descarga ya!, con los enlaces de abajo o escaneando el código QR.</p>
             <div class="flex flex-wrap gap-4">
                 <img src="{% static "images/index/google-play.png" %}" alt="Play Store" class="h-6 cursor-pointer hover:opacity-90 transition-opacity">Play Store
             </div>
@@ -164,8 +164,8 @@
                     <div class="flex items-center mb-4">
                         <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb" alt="Sarah Mitchell" class="w-16 h-16 rounded-full object-cover">
                         <div class="ml-4">
-                            <h3 class="font-heading text-foreground">Sarah Mitchell</h3>
-                            <p class="text-gray-800 text-sm">New York, USA</p>
+                            <h3 class="font-heading text-foreground">Sara Pérez</h3>
+                            <p class="text-gray-800 text-sm">2025-01-12 20:35</p>
                         </div>
                     </div>
                     <div class="flex mb-4">
@@ -175,15 +175,15 @@
                         <svg class="w-5 h-5 text-chart-1" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                         <svg class="w-5 h-5 text-chart-1" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                     </div>
-                    <p class="text-foreground mb-4">"The anti-theft system has given me complete peace of mind. The installation was seamless and the 24/7 monitoring is exceptional. I feel much safer in my home now."</p>
+                    <p class="text-foreground mb-4">"El sistema antirrobo me ha dado total tranquilidad. La instalación fue impecable y la monitorización 24/7 es excepcional. Ahora me siento mucho más segura en casa."</p>
                 </div>
 
                 <div class="bg-colorF2 p-6 rounded-lg shadow-sm hover:shadow-lg transition transform hover:scale-105 hover:shadow-lg">
                     <div class="flex items-center mb-4">
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" alt="John Cooper" class="w-16 h-16 rounded-full object-cover">
                         <div class="ml-4">
-                            <h3 class="font-heading text-foreground">John Cooper</h3>
-                            <p class="text-gray-800 text-sm">Los Angeles, USA</p>
+                            <h3 class="font-heading text-foreground">Luis Hernández</h3>
+                            <p class="text-gray-800 text-sm">2024-12-12 10:01</p>
                         </div>
                     </div>
                     <div class="flex mb-4">
@@ -193,15 +193,15 @@
                         <svg class="w-5 h-5 text-chart-1" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                         <svg class="w-5 h-5 text-chart-1" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                     </div>
-                    <p class="text-foreground mb-4">"As a business owner, security is paramount. This system has protected my store effectively and the customer service is outstanding."</p>
+                    <p class="text-foreground mb-4">"Como propietario de un negocio, la seguridad es primordial. Este sistema ha protegido mi tienda eficazmente y el servicio al cliente es excepcional."</p>
                 </div>
 
                 <div class="bg-colorF2 p-6 rounded-lg shadow-sm hover:shadow-lg transition transform hover:scale-105 hover:shadow-lg">
                     <div class="flex items-center mb-4">
                         <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80" alt="Emma Wilson" class="w-16 h-16 rounded-full object-cover">
                         <div class="ml-4">
-                            <h3 class="font-heading text-foreground">Emma Wilson</h3>
-                            <p class="text-gray-800 text-sm">Chicago, USA</p>
+                            <h3 class="font-heading text-foreground">Cecilia Lopez</h3>
+                            <p class="text-gray-800 text-sm">2023-09-12 17:21</p>
                         </div>
                     </div>
                     <div class="flex mb-4">
@@ -211,11 +211,54 @@
                         <svg class="w-5 h-5 text-chart-1" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                         <svg class="w-5 h-5 text-chart-1" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                     </div>
-                    <p class="text-foreground mb-4">"The vehicle protection features are fantastic. I can track my car's location and receive instant alerts. Worth every penny!"</p>
+                    <p class="text-foreground mb-4">"Las funciones de protección del producto son fantásticas. Puedo rastrear la ubicación de mi artículo y recibir alertas instantáneas. ¡Vale cada centavo!"</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="py-20">
+        {% if request.user.is_authenticated %}
+        <div class="max-w-3xl mx-auto p-4 bg-white rounded-lg shadow-md flex flex-col items-center text-center">
+            <h3 class="text-3xl font-bold mb-6 text-gray-800">¡Deja tu comentario!</h3>
+            <P class="text-xs mb-6 text-gray-800">Ayúdanos a que otros alcancen un nuevo nivel de seguridad con tu comentario.</P>
+            <p class="text-xs font-bold mb-6  text-gray-800">¡Clientes como tú marcan la diferencia!</p>
+            <div class="mb-6">
+            <div class="mb-6">
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.Descripción.label_tag }}
+                    <div class="mb-4 text-left">
+
+                        {{ form.Descripción }}
+                    </div>
+                    <button type="submit" class="bg-primary text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition">Publicar comentario</button>
+                </form>
+            </div>
+        {% endif %}
+    </section>
+        <hr class="my-8">
+
+        <section class="py-20">
+            <div class="max-w-4xl mx-auto p-4 bg-white rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4">Comentarios</h2>
+
+        {% for comment in comments %}
+        <div class="mb-6 p-4 border rounded-md">
+            <div class="flex items-center mb-2">
+                <span class="font-semibold">{{ comment.user.get_full_name|default:comment.user.username }}</span>                
+            </div>
+            {{ comment.created_at|date:"Y-m-d H:i" }}
+                <p class="text-gray-800 p-4">{{ comment.Descripción }}</p>
+                    <p class="text-gray-500 text-sm mt-2">
+            </p>
+        {% endfor %}
+    </div>
+</div>
+</section>
+
+
+{% load comments_extras %}
 
     <script src="{% static 'js/main.js' %}"></script>
 {% endblock %}

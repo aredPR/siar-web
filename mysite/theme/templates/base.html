@@ -8,6 +8,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+	<style>
+		@keyframes breathing {
+		  0% { transform: scale(1); opacity: 1; }
+		  50% { transform: scale(1.05); opacity: 0.8; }
+		  100% { transform: scale(1); opacity: 1; }
+		}
+	  
+		.animate-breathing {
+		  animation: breathing 2.5s infinite ease-in-out;
+		}
+	  </style>
 
 	{% tailwind_css %}
 </head>
@@ -16,25 +27,21 @@
 		<nav class="rounded-3xl shadow-md">
 		  <div class="max-w-7xl mx-auto">
 			<div class="flex justify-between items-center h-14">
-			  <!-- Logo -->
-			  <div class="flex items-center justify-between">
-			  <a href="{% url 'main:home' %}" class="flex items-center group">
-				<!-- Logo Container with Animation -->
-				<div class="relative w-16 h-16 logo-container">
-						<img src="{% static 'images/logo3.svg' %}"
-							 alt="Logo SIAR">
+			<!-- Logo -->
+			<div class="flex items-center">
+				<!-- Logo Container -->
+				<a href="{% url 'main:home' %}" class="flex items-center group" aria-label="Ir al inicio">
+				<div class="w-auto h-20 flex-shrink-0 mt-2 animate-breathing">
+					<img src="{% static 'images/logo3.svg' %}" alt="Logo SIAR" class="w-full h-full">
+				</div>
+				<!-- Texto SIAR -->
+				<span class="ml-3 text-2xl font-bold text-primary font-roboto animated-text">SIAR</span>
+				</a>
+			</div>
 						
-				</div>
-			  </a>
-
-				<!-- Additional SIAR text with animation -->
-				<div class="ml-4">
-					<span class="text-2xl font-bold text-primary animated-text">SIAR</span>
-				  </div>
-				</div>
 			  <!-- Menú principal -->
 			  <div class="hidden md:flex space-x-8 items-center">
-				<a href="{% url 'main:home'%}" class="text-primary font-semibold hover:opacity-90 transition">Inicio</a>
+				<a href="{% url 'main:home'%}" class="text-primary font-semibold hover:opacity-90 transition" aria-label="Ir al inicio">Inicio</a>
 	  
 				<!-- Menú con submenú en Acerca de -->
 				<div class="relative group">
@@ -47,7 +54,7 @@
 				  <!-- Submenú -->
 				  <div class="absolute left-0 mt-2 w-40 bg-white rounded-2xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-10">
 					<a href="{% url 'main:producto' %}" class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white transition">Producto</a>
-					<a href="{% url 'main:casouso' %}" class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white transition">Casos de Uso</a>
+					<a href="{% url 'main:casouso' %}" class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white transition">Casos de uso</a>
 					<a href="{% url 'main:tecnologia' %}" class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white transition">Tecnología</a>
 				  </div>
 			</div>
@@ -59,11 +66,11 @@
 			  <!-- Botones de acción -->
 			  <div class="flex items-center space-x-4">
 				{% if request.user.is_authenticated %}
-                      <a href="{% url 'main:dashboard' %}" class="bg-primary text-white px-5 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">Dashboard</a>
+                      <a href="{% url 'main:dashboard' %}" class="bg-primary text-white px-5 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">Principal</a>
                       <!-- Change the next line -->
                       <form method="post" action="{% url 'logout' %}">
                           {% csrf_token %}
-                          <button type="submit" class="bg-primary text-white px-5 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">Cerrar Sesión</button>
+                          <button type="submit" class="bg-primary text-white px-5 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">Cerrar sesión</button>
                       </form>
               {% else %}
                       <a href="{% url 'main:acceder' %}" class="bg-primary text-white px-5 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">Acceder</a>
@@ -88,6 +95,7 @@
     </footer>
     </footer>
 </body>
+
 </html>
 
 

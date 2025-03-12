@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Conponentes del sistema{% endblock %}
+{% block title %}Componentes del sistema{% endblock %}
 
 {% block content %}
 <style>
@@ -9,10 +9,14 @@
         transform: translateY(-5px);
         box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
+
+        .custom-header {
+            background: linear-gradient(to right, #264653 65%, white 100%);
+        }
 </style>
 </head>
 <body class="bg-gray-50">
-<header class="bg-gradient-to-r from-primary to-secondary text-white py-12 px-4 sm:px-6 lg:px-8">
+    <header class="custom-header text-white py-12 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto">
         <h1 class="text-4xl font-bold tracking-tight text-center">Componentes del Sistema</h1>
         <p class="mt-4 text-xl text-center max-w-3xl mx-auto">Visualiza todos los componentes hardware y software que conforman nuestro sistema.</p>
@@ -69,7 +73,7 @@
                 <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
                     <img src="{% static "images\tecnologia\buzzer.jpg" %}" alt="Buzzer Activo" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h4 class="text-xl font-semibold text-primary mb-2">Buzzer Activo</h4>
+                        <h4 class="text-xl font-semibold text-primary mb-2">Buzzer activo</h4>
                         <p class="text-gray-700">Componente electrónico que genera sonidos cuando recibe una señal eléctrica. Utilizado para alertas audibles en el sistema.</p>
                     </div>
                 </div>
@@ -87,7 +91,7 @@
                 <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
                     <img src="{% static "images\tecnologia\pila.jpg" %}" alt="Fuente de Alimentación" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h4 class="text-xl font-semibold text-primary mb-2">Fuente de Alimentación</h4>
+                        <h4 class="text-xl font-semibold text-primary mb-2">Fuente de alimentación</h4>
                         <p class="text-gray-700">Proporciona la energía eléctrica necesaria para el funcionamiento de todos los componentes del sistema, con el voltaje y amperaje adecuados.</p>
                     </div>
                 </div>
@@ -96,7 +100,7 @@
                 <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
                     <img src="{% static "images\tecnologia\protoboard.jpg" %}" alt="Cables y Protoboard" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h4 class="text-xl font-semibold text-primary mb-2">Cables y Protoboard</h4>
+                        <h4 class="text-xl font-semibold text-primary mb-2">Cables y protoboard</h4>
                         <p class="text-gray-700">Elementos para la conexión física entre componentes. La protoboard permite crear circuitos sin soldadura, mientras que los cables establecen las conexiones eléctricas.</p>
                     </div>
                 </div>
@@ -147,7 +151,7 @@
                 <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
                     <img src="{% static "images\tecnologia\html.jpg" %}" alt="Interfaz Web" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h4 class="text-xl font-semibold text-primary mb-2">Interfaz Web</h4>
+                        <h4 class="text-xl font-semibold text-primary mb-2">Interfaz web</h4>
                         <p class="text-gray-700">Interfaz de usuario desarrollada con HTML, CSS y JavaScript que permite a los usuarios interactuar con el sistema a través de un navegador web.</p>
                     </div>
                 </div>
@@ -198,7 +202,7 @@
                 <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
                     <img src="{% static "images\tecnologia\movil.png" %}" alt="App Móvil" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h4 class="text-xl font-semibold text-primary mb-2">App Móvil</h4>
+                        <h4 class="text-xl font-semibold text-primary mb-2">App móvil</h4>
                         <p class="text-gray-700">Aplicación para dispositivos móviles que permite a los usuarios interactuar con el sistema IoT de forma remota, recibir notificaciones y controlar dispositivos.</p>
                     </div>
                 </div>
