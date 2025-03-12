@@ -1,0 +1,197 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Section with Full Screen Background -->
+<section class="relative min-h-[90vh] flex items-center">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+        <img src="{% static 'images/casos-uso/mall.jpg' %}"
+             alt="Background"
+             class="w-full h-full object-cover brightness-50">
+    </div>
+    <!-- Content -->
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center text-white">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">¿Dónde puedes implementar SIAR?</h1>
+            <p class="text-xl mb-6">Descubre cómo SIAR puede proteger tu negocio con soluciones personalizadas, asegurando su seguridad y éxito en todo momento.</p>
+            <button onclick="scrollToUseCases()"
+                    class="bg-white text-primary px-8 py-3 rounded-lg font-bold
+                           transition transform hover:scale-105 hover:shadow-lg">
+                Conoce más
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Use Cases Section -->
+<section id="use-cases" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+            <!-- Section Title -->
+            <h2 class="text-4xl font-bold text-center text-primary mb-8">Casos de uso</h2>
+            <p class="text-xl text-gray-600 text-center mb-10 max-w-3xl mx-auto">
+                Con SIAR, encuentra la solución de seguridad perfecta para tu negocio, adaptada a tus necesidades y entorno específico.
+            </p>
+            
+            <!-- Use Case Cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+                {% for case in use_cases %}
+                <!-- Flip Card Container -->
+                <div class="flip-card h-[300px] w-full perspective-1000">
+                    <!-- Flip Card Inner Container -->
+                    <div class="relative w-full h-full transition-transform duration-700 transform-style-3d hover:rotate-y-180">
+                        <!-- Front Side -->
+                        <div class="absolute w-full h-full backface-hidden">
+                            <img src="{% static case.image %}"
+                                 alt="{{ case.title }}"
+                                 class="w-full h-full object-cover rounded-xl">
+                        </div>
+                        <!-- Back Side -->
+                        <div class="absolute w-full h-full bg-white rounded-xl p-6 backface-hidden rotate-y-180 transform border-2 border-primary">
+                            <h3 class="text-lg font-bold text-primary mb-4 text-center">{{ case.title }}</h3>
+                        <p class="text-gray-600 text-sm text-justify">
+                                {{ case.description }}
+                        </p>
+                    </div>
+                </div>
+                    </div>
+                {% endfor %}
+                    </div>
+                </div>
+                    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="bg-primary text-white py-16">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-4">¿Estás listo para llevar la protección de tu negocio al siguiente nivel?</h2>
+        <p class="text-xl mb-8">Implementa SIAR en tu negocio y garantiza la máxima protección contra robos y amenazas.</p>
+        <a href="{% url 'main:nosotros' %}"
+           class="bg-white text-primary px-8 py-3 rounded-full font-semibold
+                  hover:bg-blue-50 transition-all duration-300
+                  hover:transform hover:scale-105">
+            Contactános ahora
+        </a>
+    </div>
+</section>
+
+<!-- Features Section with Interactive Circles -->
+<section class="py-10 bg-white mb-8">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center text-primary mb-12">Ventajas competitivas</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1: Security -->
+            <div class="group">
+                <div class="flex flex-col items-center">
+                    <div class="w-24 h-24 bg-primary rounded-full flex items-center justify-center
+                               transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg cursor-pointer mb-4">
+                        <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                        <h3 class="text-xl font-bold text-primary mb-2">Seguridad Avanzada</h3>
+                    <div class="bg-white rounded-lg shadow-lg p-4 opacity-0 group-hover:opacity-100
+                                transition-all duration-300 min-h-[80px]">
+                        <p class="text-gray-600 text-center text-sm">
+                            Sistema de seguridad RFID de última generación con monitoreo constante y alertas inmediatas.
+                        </p>
+                </div>
+            </div>
+                    </div>
+
+            <!-- Feature 2: Installation -->
+            <div class="group">
+                <div class="flex flex-col items-center">
+                    <div class="w-24 h-24 bg-primary rounded-full flex items-center justify-center
+                               transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg cursor-pointer mb-4">
+                        <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2">Instalación Rápida</h3>
+                    <div class="bg-white rounded-lg shadow-lg p-4 opacity-0 group-hover:opacity-100
+                                transition-all duration-300 min-h-[80px]">
+                        <p class="text-gray-600 text-center text-sm">
+                            Proceso de instalación simplificado y configuración inmediata para comenzar a proteger tus activos.
+                        </p>
+                </div>
+            </div>
+        </div>
+
+            <!-- Feature 3: Monitoring -->
+            <div class="group">
+                <div class="flex flex-col items-center">
+                    <div class="w-24 h-24 bg-primary rounded-full flex items-center justify-center
+                               transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg cursor-pointer mb-4">
+                        <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2">Monitoreo en Tiempo Real</h3>
+                    <div class="bg-white rounded-lg shadow-lg p-4 opacity-0 group-hover:opacity-100
+                                transition-all duration-300 min-h-[80px]">
+                        <p class="text-gray-600 text-center text-sm">
+                            Seguimiento continuo y alertas instantáneas ante cualquier actividad sospechosa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+function scrollToUseCases() {
+    document.getElementById('use-cases').scrollIntoView({ behavior: 'smooth' });
+}
+
+// Add this to your existing JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    const features = document.querySelectorAll('.group');
+    
+    features.forEach(feature => {
+        const hoverContent = feature.querySelector('.absolute');
+        
+        feature.addEventListener('mouseenter', () => {
+            // Ensure hover content is visible and positioned correctly
+            const featureRect = feature.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+            
+            if (featureRect.bottom + 200 > viewportHeight) {
+                hoverContent.style.top = 'auto';
+                hoverContent.style.bottom = '100%';
+                hoverContent.style.marginTop = '0';
+                hoverContent.style.marginBottom = '1rem';
+            }
+        });
+    });
+});
+</script>
+
+<style>
+    .perspective-1000 {
+        perspective: 1000px;
+    }
+    
+    .transform-style-3d {
+        transform-style: preserve-3d;
+    }
+    
+    .backface-hidden {
+        backface-visibility: hidden;
+    }
+    
+    .rotate-y-180 {
+        transform: rotateY(180deg);
+    }
+    
+    .hover\:rotate-y-180:hover {
+        transform: rotateY(180deg);
+    }
+</style>
+
+{% endblock %}

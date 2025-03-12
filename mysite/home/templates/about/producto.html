@@ -4,63 +4,187 @@
 {% block title %}Producto{% endblock %}
 
 {% block content %}
-<body class="bg-gray-100 text-gray-800">
+<div class="min-h-screen bg-gray-50 text-gray-800">
     <div class="max-w-6xl mx-auto p-6">
-        <h1 class="text-3xl font-bold text-center mb-8">¿Cómo Funciona el Sistema?</h1>
-        
-        <!-- Implementación Física -->
-        <div class="bg-white p-6 rounded-2xl shadow-md mb-6">
-            <h2 class="text-2xl font-semibold mb-4">Implementación Física</h2>
-            <p class="text-gray-600">Para instalar el sistema en tu negocio, sigue estos pasos:</p>
-            <ul class="list-disc pl-5 mt-3 text-gray-600">
-                <li>Adherir los llaveros RFID a los bienes o productos.</li>
-                <li>Instalar el lector RFID en las salidas del establecimiento.</li>
-                <li>Configurar la conexión del lector con la aplicación móvil.</li>
-                <li>Realizar pruebas para garantizar su correcto funcionamiento.</li>
-            </ul>
-            <img src="{% static 'img/seguridad.png' %}" alt="Seguridad" class="mx-auto mb-4">
+      <h1 class="text-4xl font-bold text-center mb-12">
+        ¿Cómo Funciona el Sistema?
+      </h1>
+      
+      <!-- Implementación Física -->
+      <div class="bg-white rounded-xl shadow-md mb-8 overflow-hidden hover:shadow-lg transition-all duration-300">
+        <div class="bg-primary p-4">
+          <h2 class="text-xl font-semibold text-white">Implementación Física</h2>
         </div>
-        
-        <!-- Descarga Manual de Usuario -->
-        <div class="bg-white p-6 rounded-2xl shadow-md mb-6">
-            <h2 class="text-2xl font-semibold mb-4">Descarga del Manual de Usuario</h2>
-            <p class="text-gray-600">En el manual de usuario encontrarás información detallada sobre:</p>
-            <ul class="list-disc pl-5 mt-3 text-gray-600">
-                <li>Requisitos previos para la instalación.</li>
-                <li>Guía de uso del sistema.</li>
-                <li>Solución de problemas y preguntas frecuentes.</li>
-            </ul>
-            <a href="#" class="text-blue-500 font-semibold mt-3 inline-block">Descargar Manual →</a>
+        <div class="p-6">
+            <p class="text-gray-600 mb-4">Para instalar el sistema en tu negocio, sigue estos pasos:</p>
+            <ol class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+              <li class="flex items-start gap-4">
+                <div class="flex-shrink-0 bg-gray-200 rounded-full p-2 flex items-center justify-center h-10 w-10">
+                  <span class="font-bold text-primary">1</span>
+                </div>
+                <div class="flex-1">
+                  <h3 class="font-bold mb-2">Instalar el lector RFID</h3>
+                  <p class="text-gray-600  mb-3">Coloca el lector RFID en las salidas del establecimiento.</p>
+                  <div class="relative h-56 w-full rounded-lg overflow-hidden shadow-md">
+                    <img 
+                      src="{% static 'images/producto/colocacion.jpg' %}" 
+                      alt="Instalación de lector RFID" 
+                      class="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                    >
+                  </div>
+                </div>
+              </li>
+              
+              <li class="flex items-start gap-4">
+                <div class="flex-shrink-0 bg-gray-200 rounded-full p-2 flex items-center justify-center h-10 w-10">
+                  <span class="font-bold text-primary">2</span>
+                </div>
+                <div class="flex-1">
+                  <h3 class="font-bold mb-2">Adherir los llaveros RFID</h3>
+                  <p class="text-gray-600 mb-3">Coloca los llaveros RFID en los bienes o productos que deseas proteger.</p>
+                  <div class="relative h-56 w-full rounded-lg overflow-hidden shadow-md">
+                    <img 
+                      src="{% static 'images/producto/llaverosRFID.jpg' %}" 
+                      alt="Llaveros RFID en productos" 
+                      class="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                    >
+                  </div>
+                </div>
+              </li>
+              
+              <li class="flex items-start gap-4">
+                <div class="flex-shrink-0 bg-gray-200 rounded-full p-2 flex items-center justify-center h-10 w-10">
+                  <span class="font-bold text-primary">3</span>
+                </div>
+                <div class="flex-1">
+                  <h3 class="font-bold mb-2">Configurar la conexión</h3>
+                  <p class="text-gray-600 mb-3">Configura la conexión del lector con la aplicación móvil.</p>
+                  <div class="relative h-56 w-full rounded-lg overflow-hidden shadow-md">
+                    <img 
+                      src="{% static 'images/producto/conexion.jpg' %}" 
+                      alt="Configuración de la conexión" 
+                      class="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                    >
+                  </div>
+                </div>
+              </li>
+              
+              <li class="flex items-start gap-4">
+                <div class="flex-shrink-0 bg-gray-200 rounded-full p-2 flex items-center justify-center h-10 w-10">
+                  <span class="font-bold text-primary">4</span>
+                </div>
+                <div class="flex-1">
+                  <h3 class="font-bold mb-2">Realizar pruebas</h3>
+                  <p class="text-gray-600 mb-3">Realiza pruebas para garantizar el correcto funcionamiento del sistema.</p>
+                  <div class="relative h-56 w-full rounded-lg overflow-hidden shadow-md">
+                    <img 
+                      src="{% static 'images/producto/implement.jpg' %}" 
+                      alt="Pruebas del sistema" 
+                      class="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                    >
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+      </div>
+      
+      <!-- Manual de Usuario -->
+      <div class="bg-white rounded-xl shadow-md mb-8 overflow-hidden hover:shadow-lg transition-all duration-300">
+        <div class="bg-primary p-4">
+          <h2 class="text-xl font-semibold text-white">Manual de Usuario</h2>
         </div>
-        
-        <!-- Términos y Condiciones -->
-        <div class="bg-white p-6 rounded-2xl shadow-md mb-6">
-            <h2 class="text-2xl font-semibold mb-4">Términos y Condiciones</h2>
-            <p class="text-gray-600">Lee atentamente los términos y condiciones antes de utilizar el sistema.</p>
-            <a href="#" class="text-blue-500 font-semibold mt-3 inline-block">Leer más →</a>
+        <div class="p-6">
+          <p class="text-gray-600 mb-4">En el manual de usuario encontrarás información detallada sobre:</p>
+          <ul class="list-disc pl-5 mt-3 text-gray-600 mb-6">
+            <li class="mb-2">Requisitos previos para la instalación.</li>
+            <li class="mb-2">Guía de uso del sistema.</li>
+            <li class="mb-2">Configuración de la Aplicación Móvil.</li>
+            <li class="mb-2">Solución de problemas.</li>
+          </ul>
+          
+          <a href="" class="download-btn group relative inline-flex items-center gap-2 px-4 py-2 border border-primary text-primary rounded-md hover:bg-blue-50 transition-all duration-300">
+            <span class="flex items-center gap-2 z-10">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 download-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Descargar Manual
+            </span>
+          </a>
         </div>
-        
-        <!-- Ventajas Competitivas -->
-        <div class="mb-6">
-            <h2 class="text-2xl font-semibold mb-4">Ventajas Competitivas</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition transform hover:scale-105 text-center">
-                    <img src="https://via.placeholder.com/100" alt="Seguridad" class="mx-auto mb-4">
-                    <h3 class="text-xl font-semibold">Seguridad Reforzada</h3>
-                    <p class="text-gray-600">Detección en tiempo real de intentos de robo.</p>
+      </div>
+      
+      <!-- Términos y Condiciones -->
+      <div class="bg-white rounded-xl shadow-md mb-8 overflow-hidden hover:shadow-lg transition-all duration-300">
+        <div class="bg-primary p-4">
+          <h2 class="text-xl font-semibold text-white">Términos y Condiciones</h2>
+        </div>
+        <div class="p-6">
+          <p class="text-gray-600 mb-4">Lee atentamente los términos y condiciones antes de utilizar el sistema.</p>
+          <a href="" class="group inline-flex items-center gap-2 px-4 py-2 border border-primary text-primary rounded-md hover:bg-blue-50 transition-all duration-300">
+            <span>Leer más</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Ventajas Competitivas -->
+      <div class="mb-8">
+        <h2 class="text-3xl font-semibold mb-6 text-center">Ventajas Competitivas</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+            <div class="p-4 flex justify-center">
+              <div class="relative h-40 w-40">
+                <div class="absolute inset-0 bg-gray-200 rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
                 </div>
-                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition transform hover:scale-105 text-center">
-                    <img src="https://via.placeholder.com/100" alt="Notificaciones" class="mx-auto mb-4">
-                    <h3 class="text-xl font-semibold">Notificaciones Instantáneas</h3>
-                    <p class="text-gray-600">Alertas en tiempo real a la aplicación móvil.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition transform hover:scale-105 text-center">
-                    <img src="https://via.placeholder.com/100" alt="Historial" class="mx-auto mb-4">
-                    <h3 class="text-xl font-semibold">Historial de Eventos</h3>
-                    <p class="text-gray-600">Accede a un registro detallado de todas las alertas.</p>
-                </div>
+              </div>
             </div>
+            <div class="p-6 text-center">
+              <h3 class="text-xl font-semibold mb-2">Seguridad Reforzada</h3>
+              <p class="text-gray-600">Detección en tiempo real de intentos de robo.</p>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+            <div class="p-4 flex justify-center">
+              <div class="relative h-40 w-40">
+                <div class="absolute inset-0 bg-gray-200 rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 text-center">
+              <h3 class="text-xl font-semibold mb-2">Notificaciones Instantáneas</h3>
+              <p class="text-gray-600">Alertas en tiempo real a la aplicación móvil.</p>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+            <div class="p-4 flex justify-center">
+              <div class="relative h-40 w-40">
+                <div class="absolute inset-0 bg-gray-200 rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 text-center">
+              <h3 class="text-xl font-semibold mb-2">Historial de Eventos</h3>
+              <p class="text-gray-600">Accede a un registro detallado de todas las alertas.</p>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</body>
+  </div>
+
+<script src="{% static 'js/main.js' %}"></script>
 {% endblock %}

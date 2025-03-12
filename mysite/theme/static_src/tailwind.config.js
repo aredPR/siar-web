@@ -45,29 +45,13 @@ module.exports = {
         extend: {
             colors: {
                 // Colorimetría de SIAR
-            primary: {
-                DEFAULT: "#264653",
-                light: "#2E5A68",  // Versión más clara para fondos
-                dark: "#1B353E",   // Versión más oscura para contrastes
-                hover: "#1F3E48",  // Para efectos hover
-                border: "#223B46", // Para bordes y líneas sutiles
-            },
-            secondary: {
-                DEFAULT: "#357F83",
-                light: "#4B9B9F",
-                dark: "#2B6A6D",
-                hover: "#2F7275",
-                border: "#317277",
-            },
-            color3: {
-                DEFAULT: "#156082",
-                light: "#1E7A9F",
-                dark: "#104A61",
-                hover: "#135873",
-                border: "#14526B",
-            },
-            colorF: "#FFFDF2", // Crema
-            colorF2: "#E9F1FA", // azul claro
+                primary: '#264653',
+                secondary: '#2a9d8f',
+                accent: '#e9c46a',
+                highlight: '#f4a261',
+                danger: '#e76f51',
+                colorF: "#FFFDF2", // Crema
+                colorF2: "#E9F1FA", // azul claro
             text: {
                 primary: "#EAEAEA", // Color para texto sobre fondo oscuro
                 secondary: "#333333", // Color para texto sobre fondo claro

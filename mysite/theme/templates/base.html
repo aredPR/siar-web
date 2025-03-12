@@ -1,76 +1,100 @@
 {% load static tailwind_tags %}
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <title>{% block title %}{% endblock %}</title>
+	<meta charset="UTF-8">
+	<title>{% block title %}{% endblock %}</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+	<link rel="icon" type="image/png" href="{% static " images/logos/favicon-96x96.png" %}" sizes="96x96" />
+	{% comment %}
+	<link rel="icon" type="image/x-icon" href="{% static " images/logos/favicon.ico" %}"> {% endcomment %}
+	{% comment %}
+	<link rel="icon" type="image/png" sizes="32x32" href="{% static " images/logos/logo4.png" %}"> {% endcomment %}
+
 	{% tailwind_css %}
 </head>
-<body>
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white">
-		<nav class="rounded-3xl shadow-md">
-		  <div class="max-w-7xl mx-auto">
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-white">
+	<nav class="rounded-xl shadow-md"> <!-- Bordes ajustados con `rounded-xl` -->
+		<div class="max-w-7xl mx-auto">
 			<div class="flex justify-between items-center h-14">
-			  <!-- Logo -->
-			  <a href="{% url 'main:home' %}" class="flex items-center">
-				<!-- Logo SVG -->
-				<img src="{% static 'images/logo3.svg' %}" alt="Logo SIAR" class="w-14">
-				<!-- Texto -->
-				<span class="text-xl font-bold text-primary">SIAR</span>
-			  </a>
-	  
-			  <!-- Menú principal -->
-			  <div class="hidden md:flex space-x-8 items-center">
-				<a href="{% url 'main:home'%}" class="text-primary font-semibold hover:opacity-90 transition">Inicio</a>
-	  
-				<!-- Menú con submenú en Acerca de -->
-				<div class="relative group">
-				  <a href="#" class="text-primary font-semibold hover:opacity-90 transition inline-flex items-center">
-					Acerca de
-					<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-					</svg>
-				  </a>
-				  <!-- Submenú -->
-				  <div class="absolute left-0 mt-2 w-40 bg-white rounded-2xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-10">
-					<a href="{% url "main:producto" %}" class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white transition">Producto</a>
-					<a href="#" class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white transition">Casos de Uso</a>
-					<a href="{% url "main:tecnologia" %}" class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white transition">Tecnología</a>
-				  </div>
-				</div>
-	  
-				<a href="{% url 'main:nosotros' %}" class="text-primary font-semibold hover:opacity-90 transition">Nosotros</a>
-				<a href="{% url "main:faq" %}" class="text-primary font-semibold hover:opacity-90 transition">Preguntas Frecuentes</a>
-			  </div>
-	  
-			  <!-- Botones de acción -->
-			  <div class="flex items-center space-x-4">
-				<a href="#" class="bg-primary text-white px-5 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">
-				  Acceder
+				<!-- Logo -->
+				<a href="{% url 'main:home' %}" class="flex items-center">
+					<img src="{% static 'images/logos/logo3.svg' %}" alt="Logo SIAR" class="w-14">
+					<span class="text-xl font-bold text-primary">SIAR</span>
 				</a>
-			  </div>
+
+				<!-- Botón Hamburguesa (Móvil) -->
+				<button class="md:hidden text-primary focus:outline-none" id="menu-toggle">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+					</svg>
+				</button>
+
+				<!-- Menú principal -->
+				<div class="hidden md:flex space-x-8 items-center" id="menu">
+					<a href="{% url 'main:home' %}" class="text-primary font-semibold hover:opacity-90 transition">Inicio</a>
+					<div class="relative group">
+						<a href="#" class="text-primary font-semibold hover:opacity-90 transition inline-flex items-center">
+							Acerca de
+							<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+							</svg>
+						</a>
+						<div class="absolute left-0 mt-2 w-40 bg-white rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-10">
+							<a href="{% url 'main:producto' %}" class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white transition">Producto</a>
+							<a href="{% url 'main:casouso' %}" class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white transition">Casos de Uso</a>
+							<a href="{% url 'main:tecnologia' %}" class="block px-4 py-2 text-sm text-primary hover:bg-primary hover:text-white transition">Tecnología</a>
+						</div>
+					</div>
+					<a href="{% url 'main:nosotros' %}" class="text-primary font-semibold hover:opacity-90 transition">Nosotros</a>
+					<a href="{% url 'main:faq' %}" class="text-primary font-semibold hover:opacity-90 transition">Preguntas Frecuentes</a>
+					<a href="{% url 'main:acceder' %}" class="bg-primary text-white px-5 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">Acceder</a> <!-- Botón aquí también -->
+				</div>
 			</div>
-		  </div>
-		</nav>
-	  </header>
-	  
 
-    <main class="pt-16">
-        {% block content %}{% endblock %}
-    </main>
+			<!-- Menú desplegable (Móvil) -->
+			<div class="hidden md:hidden space-y-2" id="mobile-menu">
+				<a href="{% url 'main:home' %}" class="block px-4 py-2 text-primary font-semibold hover:bg-gray-100">Inicio</a>
+				<a href="{% url 'main:producto' %}" class="block px-4 py-2 text-primary font-semibold hover:bg-gray-100">Producto</a>
+				<a href="{% url 'main:casouso' %}" class="block px-4 py-2 text-primary font-semibold hover:bg-gray-100">Casos de Uso</a>
+				<a href="{% url 'main:tecnologia' %}" class="block px-4 py-2 text-primary font-semibold hover:bg-gray-100">Tecnología</a>
+				<a href="{% url 'main:nosotros' %}" class="block px-4 py-2 text-primary font-semibold hover:bg-gray-100">Nosotros</a>
+				<a href="{% url 'main:faq' %}" class="block px-4 py-2 text-primary font-semibold hover:bg-gray-100">Preguntas Frecuentes</a>
+				<a href="{% url 'main:acceder' %}" class="block px-4 py-2 bg-primary text-white font-semibold rounded-lg hover:bg-opacity-90 transition">Acceder</a> <!-- Botón dentro del menú comprimido -->
+			</div>
+		</div>
+	</nav>
+</header>
 
-    <footer>
-        <footer class="bg-primary py-12">
+<script>
+	// JavaScript para alternar menú en móvil
+	const menuToggle = document.getElementById('menu-toggle');
+	const mobileMenu = document.getElementById('mobile-menu');
+
+	menuToggle.addEventListener('click', () => {
+		mobileMenu.classList.toggle('hidden');
+	});
+</script>
+
+
+	<main class="pt-16">
+		{% block content %}{% endblock %}
+	</main>
+
+	<footer>
+		<footer class="bg-primary py-12">
 			<div class="container mx-auto px-4">
 				<div class="text-center text-white">
 					<p>© 2024 RFID IoT Security System. All rights reserved.</p>
 				</div>
 			</div>
 		</footer>
-    </footer>
+	</footer>
 </body>
-</html>
 
+</html>

@@ -5,23 +5,223 @@
 
 {% block content %}
 <!-- Contact Section -->
-<section class="py-20 bg-primary">
-    <div class="container mx-auto px-4">
-        <div class="max-w-2xl mx-auto text-center">
-            <h2 class="text-4xl font-heading text-white mb-8">Ready to Secure Your Assets?</h2>
-            <form class="space-y-4">
-                <input type="text" placeholder="Full Name" class="w-full px-4 py-3 rounded-lg">
-                <input type="email" placeholder="Business Email" class="w-full px-4 py-3 rounded-lg">
-                <input type="tel" placeholder="Phone Number" class="w-full px-4 py-3 rounded-lg">
-                <select class="w-full px-4 py-3 rounded-lg">
-                    <option>Select Industry</option>
-                    <option>Retail</option>
-                    <option>Warehouse</option>
-                    <option>Manufacturing</option>
-                </select>
-                <button class="w-full bg-white text-primary px-8 py-3 rounded-lg font-bold hover:bg-opacity-90 transition">Get Started</button>
-            </form>
-        </div>
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <!-- Título y descripción con imagen -->
+    <div class="flex flex-col md:flex-row items-center">
+      <!-- Texto -->
+      <div class="md:w-1/2 text-center md:text-left">
+        <h2 class="text-6xl font-bold text-gray-800 mb-10 text-center">Cheetah Security</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto text-justify text-2xl">
+          Somos un equipo enfocado en el desarrollo de software, conformado por estudiantes universitarios apasionados
+          por la tecnología.
+          Nuestro equipo joven y dinámico trabaja para crear soluciones inteligentes y eficientes, combinando
+          conocimientos académicos con ideas frescas.
+          Desarrollamos productos robustos y adaptables que
+          responden a las necesidades de nuestros clientes.
+        </p>
+      </div>
+      <!-- Imagen -->
+      <div class="md:w-1/2 flex justify-center mt-8 md:mt-0 ">
+        <img src="{% static 'images/nosotros/Logo_CheetahSecurity.jpg' %}" alt="Logo de Cheetah Security"
+          class="w-96 h-96 object-cover rounded-full">
+      </div>
     </div>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-8 mb-12 mx-8 my-24">
+    <!-- Misión -->
+    <div class="bg-primary p-6 rounded-lg transition transform hover:scale-105 hover:shadow-lg">
+      <h3 class="text-xl font-bold text-white mb-4 text-center">Misión</h3>
+      <p class="text-white text-justify">
+        Nuestra misión es desarrollar soluciones de software inteligentes y accesibles para distintos tipos de clientes.
+        Aprovechamos el talento y la creatividad de nuestro equipo de estudiantes universitarios para innovar
+        continuamente,
+        brindando productos robustos que se adapten a las necesidades dinámicas del mercado.
+      </p>
+    </div>
+    <!-- Visión -->
+    <div class="bg-primary p-6 rounded-lg transition transform hover:scale-105 hover:shadow-lg">
+      <h3 class="text-xl font-bold text-white mb-4 text-center">Visión</h3>
+      <p class="text-white text-justify">
+        Aspiramos a ser líderes en el campo del desarrollo de software, convirtiéndonos en el referente de soluciones
+        tecnológicas seguras y eficientes.
+        Buscamos transformar el panorama de la seguridad empresarial, impulsando la innovación y creando un futuro en el
+        que la tecnología proteja
+        y potencie el crecimiento sostenible de nuestros clientes.
+      </p>
+    </div>
+  </div>
+
+
+  <!-- Tarjetas de equipo -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <!-- Título -->
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Nuestro Equipo</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto"> 
+          Conoce al talentoso equipo detrás de Cheetah Security.
+        </p>
+      </div>
+
+      <!-- Tarjetas de equipo -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+        <!-- Miembro 1 -->
+        <div
+          class="bg-gradient-to-r from-white to-gray-100 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
+          <div class="mb-6">
+            <img src="{% static 'images/nosotros/Yamileth.jpeg' %}" alt="Meribeth Yamilei Pérez Espinoza"
+              class="w-32 h-32 mx-auto rounded-full border-4 border-gray-200 shadow-sm">
+          </div>
+          <h3 class="text-lg font-bold text-gray-700 text-center mb-2">Meribeth Yamileth Pérez Espinoza</h3>
+          <p class="text-gray-600 text-center mb-4">Líder de Proyecto, Desarrollador Móvil y Desarrollador de
+            Aplicaciones Móviles</p>
+          <div class="mt-4 flex justify-center space-x-3">
+            <a href="https://www.linkedin.com/in/meribeth-yamilet-perez-espinoza-a52a5b290/" target="_blank"
+              class="bg-gray-100 hover:bg-blue-500 text-gray-500 hover:text-white p-2 rounded-full transition-colors duration-300">
+              <i class="fab fa-linkedin text-lg"></i>
+            </a>
+            <a href="https://www.instagram.com/meribethperezbienesraices?igsh=MWRucTI1Z2kycWdpbg==" target="_blank"
+              class="bg-gray-100 hover:bg-pink-500 text-gray-500 hover:text-white p-2 rounded-full transition-colors duration-300">
+              <i class="fab fa-instagram text-lg"></i>
+            </a>
+            <!-- GitHub -->
+            <a href="https://github.com/Yammery80" target="_blank"
+              class="bg-gray-100 hover:bg-gray-800 text-gray-500 hover:text-white p-2 rounded-full transition-colors duration-300">
+              <i class="fab fa-github text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Miembro 2 -->
+        <div
+          class="bg-gradient-to-r from-white to-gray-100 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
+          <div class="mb-6">
+            <img src="{% static 'images/nosotros/Omar.jpeg' %}" alt="Gael Omar Palacios Hernandez"
+              class="w-32 h-32 mx-auto rounded-full border-4 border-gray-200 shadow-sm">
+          </div>
+          <h3 class="text-lg font-bold text-gray-700 text-center mb-2">Gael Omar Palacios Hernandez</h3>
+          <p class="text-gray-600 text-center mb-4">Desarrollador IoT, Documentador Técnico y Administrador de Base de
+            Datos</p>
+          <div class="mt-4 flex justify-center space-x-3">
+            <a href="https://www.linkedin.com/in/gael-omar-palacios-hern%C3%A1ndez-5591aa16a/" target="_blank"
+              class="bg-gray-100 hover:bg-blue-500 text-gray-500 hover:text-white p-2 rounded-full transition-colors duration-300">
+              <i class="fab fa-linkedin text-lg"></i>
+            </a>
+            <a href="https://www.instagram.com/_palacios_2101?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"
+              class="bg-gray-100 hover:bg-pink-500 text-gray-500 hover:text-white p-2 rounded-full transition-colors duration-300">
+              <i class="fab fa-instagram text-lg"></i>
+            </a>
+            <!-- GitHub -->
+            <a href="https://github.com/GaelOmar2126" target="_blank"
+              class="bg-gray-100 hover:bg-gray-800 text-gray-500 hover:text-white p-2 rounded-full transition-colors duration-300">
+              <i class="fab fa-github text-lg"></i>
+            </a>
+            <a href="mailto:gaelomar234@gmail.com" target="_blank" class="bg-gray-100 hover:bg-red-500 text-gray-500 hover:text-white p-2 rounded-full transition-colors duration-300">
+              <i class="fas fa-envelope text-lg"></i>
+            </a>
+            
+          </div>
+        </div>
+
+        <!-- Miembro 3 -->
+        <div
+          class="bg-gradient-to-r from-white to-gray-100 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
+          <div class="mb-6">
+            <img src="{% static 'images/nosotros/Brian.jpg' %}" alt="Brian Octavio Romero Arellano"
+              class="w-32 h-32 mx-auto rounded-full border-4 border-gray-200 shadow-sm">
+          </div>
+          <h3 class="text-lg font-bold text-gray-700 text-center mb-2">Brian Octavio Romero Arellano</h3>
+          <p class="text-gray-600 text-center mb-4">Desarrollador Web, Desarrollador Móvil y Desarrollador IoT</p>
+          <div class="mt-4 flex justify-center space-x-3">
+            <a href="https://www.linkedin.com/in/brian-octavio-romero-arellano-a3ab10310/" target="_blank"
+              class="bg-gray-100 hover:bg-blue-500 text-gray-500 hover:text-white p-2 rounded-full transition-colors duration-300">
+              <i class="fab fa-linkedin text-lg"></i>
+            </a>
+            <a href="https://www.instagram.com/brian_octavio_/" target="_blank"
+              class="bg-gray-100 hover:bg-pink-500 text-gray-500 hover:text-white p-2 rounded-full transition-colors duration-300">
+              <i class="fab fa-instagram text-lg"></i>
+            </a>
+            <!-- GitHub -->
+            <a href="https://github.com/dev-brian" target="_blank"
+              class="bg-gray-100 hover:bg-gray-800 text-gray-500 hover:text-white p-2 rounded-full transition-colors duration-300">
+              <i class="fab fa-github text-lg"></i>
+            </a>
+            <!-- Gmail -->
+            <a href="mailto:dev.brianoctavio@gmail.com" target="_blank" class="bg-gray-100 hover:bg-red-500 text-gray-500 hover:text-white p-2 rounded-full transition-colors duration-300">
+              <i class="fas fa-envelope text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+
+        <!-- Miembro 4 -->
+        <div
+          class="bg-gradient-to-r from-white to-gray-100 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
+          <div class="mb-6">
+            <img src="{% static 'images/nosotros/Emilio.jpeg' %}" alt="Emilio Vallejo Robles"
+              class="w-32 h-32 mx-auto rounded-full border-4 border-gray-200 shadow-sm">
+          </div>
+          <h3 class="text-lg font-bold text-gray-700 text-center mb-2">Emilio Vallejo Robles</h3>
+          <p class="text-gray-600 text-center mb-4">Desarrollador Web, Desarrollador IoT y Documentador Técnico</p>
+          <div class="mt-4 flex justify-center space-x-3">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/emilio-vallejo-robles-841216337/" target="_blank"
+              class="bg-gray-100 hover:bg-blue-500 text-gray-500 hover:text-white p-2 rounded-full transition-colors duration-300">
+              <i class="fab fa-linkedin text-lg"></i>
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/milito_rubin/" target="_blank"
+              class="bg-gray-100 hover:bg-pink-500 text-gray-500 hover:text-white p-2 rounded-full transition-colors duration-300">
+              <i class="fab fa-instagram text-lg"></i>
+            </a>
+            <!-- GitHub -->
+            <a href="https://github.com/tu-enlace-github" target="_blank"
+              class="bg-gray-100 hover:bg-gray-800 text-gray-500 hover:text-white p-2 rounded-full transition-colors duration-300">
+              <i class="fab fa-github text-lg"></i>
+            </a>
+            <!-- Gmail -->
+            <a href="mailto:emiliovallejo456@gmail.com" target="_blank" class="bg-gray-100 hover:bg-red-500 text-gray-500 hover:text-white p-2 rounded-full transition-colors duration-300">
+              <i class="fas fa-envelope text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+
+
+        <!-- Miembro 5 -->
+        <div
+          class="bg-gradient-to-r from-white to-gray-100 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
+          <div class="mb-6">
+            <img src="{% static 'images/nosotros/Ared.jpeg' %}" alt="Angel Ared Perez Rodriguez"
+              class="w-32 h-32 mx-auto rounded-full border-4 border-gray-200 shadow-sm">
+          </div>
+          <h3 class="text-lg font-bold text-gray-700 text-center mb-2">Angel Ared Perez Rodriguez</h3>
+          <p class="text-gray-600 text-center mb-4">Desarrollador Web Full-Stack y Desarrollador IoT</p>
+          <div class="mt-4 flex justify-center space-x-3">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/angel-undefined-8197a3284/" target="_blank"
+              class="bg-gray-100 hover:bg-blue-500 text-gray-500 hover:text-white p-2 rounded-full transition-colors duration-300">
+              <i class="fab fa-linkedin text-lg"></i>
+            </a>
+            <!-- GitHub -->
+            <a href="https://github.com/AredAngel23" target="_blank"
+              class="bg-gray-100 hover:bg-gray-800 text-gray-500 hover:text-white p-2 rounded-full transition-colors duration-300">
+              <i class="fab fa-github text-lg"></i>
+            </a>
+            <!-- Gmail -->
+            <a href="mailto:ared230000@gmail.com" target="_blank" class="bg-gray-100 hover:bg-red-500 text-gray-500 hover:text-white p-2 rounded-full transition-colors duration-300">
+              <i class="fas fa-envelope text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  </div>
 </section>
+
 {% endblock %}
