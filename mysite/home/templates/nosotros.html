@@ -5,35 +5,35 @@
 
 {% block content %}
 <!-- Contact Section -->
-<section class="py-20 bg-gray-100">
+<section class="py-16 bg-gray-50">
   <div class="container mx-auto px-4">
     <!-- Título y descripción con imagen -->
     <div class="flex flex-col md:flex-row items-center">
       <!-- Texto -->
       <div class="md:w-1/2 text-center md:text-left">
-        <h2 class="text-6xl font-bold text-gray-800 mb-4 text-center">Cheetah Security</h2>
-        <p class="text-gray-600 max-w-3xl mx-auto text-justify text-xl">
+        <h2 class="text-6xl font-bold text-gray-800 mb-10 text-center">Cheetah Security</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto text-justify text-2xl">
           Somos un equipo enfocado en el desarrollo de software, conformado por estudiantes universitarios apasionados
           por la tecnología.
           Nuestro equipo joven y dinámico trabaja para crear soluciones inteligentes y eficientes, combinando
           conocimientos académicos con ideas frescas.
-          Con visión de futuro y compromiso con la excelencia, desarrollamos productos robustos y adaptables que
+          Desarrollamos productos robustos y adaptables que
           responden a las necesidades de nuestros clientes.
         </p>
       </div>
       <!-- Imagen -->
-      <div class="md:w-1/2 flex justify-center mt-8 md:mt-0">
-        <img src="../static/images/Logo_CheetahSecurity.jpg" alt="Logo de Cheetah Security"
+      <div class="md:w-1/2 flex justify-center mt-8 md:mt-0 ">
+        <img src="{% static 'images/nosotros/Logo_CheetahSecurity.jpg' %}" alt="Logo de Cheetah Security"
           class="w-96 h-96 object-cover rounded-full">
       </div>
     </div>
   </div>
 
-  <div class="grid md:grid-cols-2 gap-8 mb-12 mx-8 my-4">
+  <div class="grid md:grid-cols-2 gap-8 mb-12 mx-8 my-24">
     <!-- Misión -->
-    <div class="bg-white p-6 rounded-lg shadow-lg">
-      <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Misión</h3>
-      <p class="text-gray-600 text-justify">
+    <div class="bg-primary p-6 rounded-lg transition transform hover:scale-105 hover:shadow-lg">
+      <h3 class="text-xl font-bold text-white mb-4 text-center">Misión</h3>
+      <p class="text-white text-justify">
         Nuestra misión es desarrollar soluciones de software inteligentes y accesibles para distintos tipos de clientes.
         Aprovechamos el talento y la creatividad de nuestro equipo de estudiantes universitarios para innovar
         continuamente,
@@ -41,9 +41,9 @@
       </p>
     </div>
     <!-- Visión -->
-    <div class="bg-white p-6 rounded-lg shadow-lg">
-      <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Visión</h3>
-      <p class="text-gray-600 text-justify">
+    <div class="bg-primary p-6 rounded-lg transition transform hover:scale-105 hover:shadow-lg">
+      <h3 class="text-xl font-bold text-white mb-4 text-center">Visión</h3>
+      <p class="text-white text-justify">
         Aspiramos a ser líderes en el campo del desarrollo de software, convirtiéndonos en el referente de soluciones
         tecnológicas seguras y eficientes.
         Buscamos transformar el panorama de la seguridad empresarial, impulsando la innovación y creando un futuro en el
@@ -55,12 +55,12 @@
 
 
   <!-- Tarjetas de equipo -->
-  <section class="py-20 bg-gray-100">
+  <section class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
       <!-- Título -->
       <div class="text-center mb-12">
         <h2 class="text-4xl font-bold text-gray-800 mb-4">Nuestro Equipo</h2>
-        <p class="text-gray-600 max-w-3xl mx-auto">
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto"> 
           Conoce al talentoso equipo detrás de Cheetah Security.
         </p>
       </div>
@@ -71,10 +71,10 @@
         <div
           class="bg-gradient-to-r from-white to-gray-100 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
           <div class="mb-6">
-            <img src="../static/images/Yamileth.jpeg" alt="Meribeth Yamilei Pérez Espinoza"
+            <img src="{% static 'images/nosotros/Yamileth.jpeg' %}" alt="Meribeth Yamilei Pérez Espinoza"
               class="w-32 h-32 mx-auto rounded-full border-4 border-gray-200 shadow-sm">
           </div>
-          <h3 class="text-lg font-bold text-gray-700 text-center mb-2">Meribeth Yamilei Pérez Espinoza</h3>
+          <h3 class="text-lg font-bold text-gray-700 text-center mb-2">Meribeth Yamileth Pérez Espinoza</h3>
           <p class="text-gray-600 text-center mb-4">Líder de Proyecto, Desarrollador Móvil y Desarrollador de
             Aplicaciones Móviles</p>
           <div class="mt-4 flex justify-center space-x-3">
@@ -98,7 +98,7 @@
         <div
           class="bg-gradient-to-r from-white to-gray-100 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
           <div class="mb-6">
-            <img src="../static/images/Omar.jpeg" alt="Gael Omar Palacios Hernandez"
+            <img src="{% static 'images/nosotros/Omar.jpeg' %}" alt="Gael Omar Palacios Hernandez"
               class="w-32 h-32 mx-auto rounded-full border-4 border-gray-200 shadow-sm">
           </div>
           <h3 class="text-lg font-bold text-gray-700 text-center mb-2">Gael Omar Palacios Hernandez</h3>
@@ -129,7 +129,7 @@
         <div
           class="bg-gradient-to-r from-white to-gray-100 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
           <div class="mb-6">
-            <img src="../static/images/Brian.jpg" alt="Brian Octavio Romero Arellano"
+            <img src="{% static 'images/nosotros/Brian.jpg' %}" alt="Brian Octavio Romero Arellano"
               class="w-32 h-32 mx-auto rounded-full border-4 border-gray-200 shadow-sm">
           </div>
           <h3 class="text-lg font-bold text-gray-700 text-center mb-2">Brian Octavio Romero Arellano</h3>
@@ -160,7 +160,7 @@
         <div
           class="bg-gradient-to-r from-white to-gray-100 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
           <div class="mb-6">
-            <img src="../static/images/Emilio.jpeg" alt="Emilio Vallejo Robles"
+            <img src="{% static 'images/nosotros/Emilio.jpeg' %}" alt="Emilio Vallejo Robles"
               class="w-32 h-32 mx-auto rounded-full border-4 border-gray-200 shadow-sm">
           </div>
           <h3 class="text-lg font-bold text-gray-700 text-center mb-2">Emilio Vallejo Robles</h3>
@@ -194,7 +194,7 @@
         <div
           class="bg-gradient-to-r from-white to-gray-100 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
           <div class="mb-6">
-            <img src="../static/images/Ared.jpeg" alt="Angel Ared Perez Rodriguez"
+            <img src="{% static 'images/nosotros/Ared.jpeg' %}" alt="Angel Ared Perez Rodriguez"
               class="w-32 h-32 mx-auto rounded-full border-4 border-gray-200 shadow-sm">
           </div>
           <h3 class="text-lg font-bold text-gray-700 text-center mb-2">Angel Ared Perez Rodriguez</h3>
