@@ -4,187 +4,381 @@
 {% block title %}Producto{% endblock %}
 
 {% block content %}
-<div class="min-h-screen bg-gray-50 text-gray-800">
-    <div class="max-w-6xl mx-auto p-6">
-      <h1 class="text-4xl font-bold text-center mb-12">
-        ¿Cómo funciona el sistema?
-      </h1>
-      
-      <!-- Implementación Física -->
-      <div class="bg-white rounded-xl shadow-md mb-8 overflow-hidden hover:shadow-lg transition-all duration-300">
-        <div class="bg-primary p-4">
-          <h2 class="text-xl font-semibold text-white">Implementación física</h2>
+<link rel="stylesheet" href="{% static 'css/producto.css' %}">
+<body class="bg-colorF text-gray-800">
+    <!-- Hero (Menú de navegación) -->
+    <header class="pt-24 pb-12 bg-gradient-to-r from-primary to-secondary text-white">
+        <div class="container mx-auto px-4 py-8 animate-fade-in active">
+            <h1 class="text-3xl md:text-4xl font-bold mb-6 text-center">Sistema Inteligente Anti-Robo</h1>
+            <p class="text-xl mb-8 text-center max-w-3xl mx-auto">Conoce cómo funciona nuestro sistema de protección avanzada con tecnología RFID, su implementación física y accede a la documentación completa.</p>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-4 mt-8">
+                <a href="#como-funciona" class="bg-secondary text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-opacity-90 transition text-center btn-hover">
+                    <i class="fas fa-question-circle mr-2"></i>¿Cómo funciona?
+                </a>
+                <a href="#implementacion" class="bg-accent text-primary font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-opacity-90 transition text-center btn-hover">
+                    <i class="fas fa-tools mr-2"></i>Implementación
+                </a>
+                <a href="#descargas" class="bg-highlight text-primary font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-opacity-90 transition text-center btn-hover">
+                    <i class="fas fa-download mr-2"></i>Documentación
+                </a>
+            </div>
         </div>
-        <div class="p-6">
-            <p class="text-gray-600 mb-4">Para instalar el sistema en tu negocio, sigue estos pasos:</p>
-            <ol class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-              <li class="flex items-start gap-4">
-                <div class="flex-shrink-0 bg-gray-200 rounded-full p-2 flex items-center justify-center h-10 w-10">
-                  <span class="font-bold text-primary">1</span>
+    </header>
+  
+    <!-- Cómo funciona -->
+    <section id="como-funciona" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary animate-fade-in">¿Cómo funciona nuestro sistema?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-colorF2 rounded-lg p-6 shadow-md hover:shadow-lg transition card-hover animate-fade-in">
+                    <div class="bg-secondary text-white rounded-full w-12 h-12 flex items-center justify-center mb-4 icon-spin">
+                        <i class="fas fa-tag text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary">Llaveros RFID</h3>
+                    <p>Cada producto es protegido con un llavero RFID que contiene un chip único. Estos llaveros son resistentes y difíciles de manipular.</p>
                 </div>
-                <div class="flex-1">
-                  <h3 class="font-bold mb-2">Instalar el lector RFID</h3>
-                  <p class="text-gray-600  mb-3">Coloca el lector RFID en las salidas del establecimiento.</p>
-                  <div class="relative h-56 w-full rounded-lg overflow-hidden shadow-md">
-                    <img 
-                      src="{% static 'images/producto/colocacion.jpg' %}" 
-                      alt="Instalación de lector RFID" 
-                      class="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                    >
+                
+                <div class="bg-colorF2 rounded-lg p-6 shadow-md hover:shadow-lg transition card-hover animate-fade-in" style="animation-delay: 0.2s;">
+                    <div class="bg-secondary text-white rounded-full w-12 h-12 flex items-center justify-center mb-4 icon-spin">
+                        <i class="fas fa-wifi text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary">Detección automática</h3>
+                    <p>Nuestros lectores RFID instalados en las salidas detectan automáticamente si un producto con llavero activo intenta salir del establecimiento.</p>
+                </div>
+                
+                <div class="bg-colorF2 rounded-lg p-6 shadow-md hover:shadow-lg transition card-hover animate-fade-in" style="animation-delay: 0.4s;">
+                    <div class="bg-secondary text-white rounded-full w-12 h-12 flex items-center justify-center mb-4 icon-spin">
+                        <i class="fas fa-bell text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary">Sistema de alarma</h3>
+                    <p>Si el lector detecta un llavero no desactivado, el sistema activa una alarma sonora y envía una notificación instantánea a la aplicación móvil.</p>
+                </div>
+            </div>
+  
+            <div class="mt-16">
+              <h3 class="text-2xl text-center font-bold mb-6 text-primary animate-fade-in">Proceso de funcionamiento</h3>
+              <div class="relative">
+                  <!-- Línea de tiempo -->
+                  <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-secondary"></div>
+                  
+                  <!-- Pasos -->
+                  <div class="space-y-12">
+                      <!-- Paso 1 -->
+                      <div class="flex flex-col md:flex-row items-center timeline-item">
+                          <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
+                              <h4 class="text-xl font-bold text-secondary mb-2">Protección del producto</h4>
+                              <p>Los llaveros RFID se adhieren a los productos y bienes en el momento de su exhibición en el establecimiento.</p>
+                          </div>
+                          <div class="md:w-12 md:h-12 bg-secondary rounded-full flex items-center justify-center z-10 timeline-dot">
+                              <span class="text-white font-bold">1</span>
+                          </div>
+                          <div class="md:w-1/2 md:pl-12 md:text-left">
+                              <img src="{% static 'images/producto/pro-llav.jpg' %}" alt="Protección del producto" class="rounded-lg shadow-md mx-auto md:ml-auto animate-scale">
+                          </div>
+                      </div>
+                      
+                      <!-- Paso 2 -->
+                      <div class="flex flex-col md:flex-row items-center timeline-item">
+                          <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
+                              <img src="{% static 'images/producto/llavero.jpg' %}" alt="Desactivación en caja" class="rounded-lg shadow-md mx-auto md:ml-auto animate-scale">
+                          </div>
+                          <div class="md:w-12 md:h-12 bg-secondary rounded-full flex items-center justify-center z-10 timeline-dot">
+                              <span class="text-white font-bold">2</span>
+                          </div>
+                          <div class="md:w-1/2 md:pl-12 md:text-left">
+                              <h4 class="text-xl font-bold text-secondary mb-2">Desactivación en caja</h4>
+                              <p>Al realizar la compra, el personal desactiva o retira el llavero RFID de los bienes o productos que lo porten.</p>
+                          </div>
+                      </div>
+                      
+                      <!-- Paso 3 -->
+                      <div class="flex flex-col md:flex-row items-center timeline-item">
+                          <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
+                              <h4 class="text-xl font-bold text-secondary mb-2">Detección en salida</h4>
+                              <p>El detector fisico ubicado en las salidas escanean constantemente la presencia de llaveros activos.</p>
+                          </div>
+                          <div class="md:w-12 md:h-12 bg-secondary rounded-full flex items-center justify-center z-10 timeline-dot">
+                              <span class="text-white font-bold">3</span>
+                          </div>
+                          <div class="md:w-1/2 md:pl-12 md:text-left">
+                              <img src="{% static 'images/producto/lector.jpg' %}" alt="Detección en salida" class="rounded-lg shadow-md mx-auto md:ml-auto animate-scale">
+                          </div>
+                      </div>
+                      
+                      <!-- Paso 4 -->
+                      <div class="flex flex-col md:flex-row items-center timeline-item">
+                          <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
+                              <img src="{% static 'images/producto/alarma.jpg' %}" alt="Activación de alarma" class="rounded-lg shadow-md mx-auto md:ml-auto animate-scale">
+                          </div>
+                          <div class="md:w-12 md:h-12 bg-secondary rounded-full flex items-center justify-center z-10 timeline-dot">
+                              <span class="text-white font-bold">4</span>
+                          </div>
+                          <div class="md:w-1/2 md:pl-12 md:text-left">
+                              <h4 class="text-xl font-bold text-secondary mb-2">Activación de alarma</h4>
+                              <p>Si se detecta un llavero activo, se activa la alarma sonora y se envía una notificación a la app del personal.</p>
+                          </div>
+                      </div>
                   </div>
-                </div>
-              </li>
-              
-              <li class="flex items-start gap-4">
-                <div class="flex-shrink-0 bg-gray-200 rounded-full p-2 flex items-center justify-center h-10 w-10">
-                  <span class="font-bold text-primary">2</span>
-                </div>
-                <div class="flex-1">
-                  <h3 class="font-bold mb-2">Adherir los llaveros RFID</h3>
-                  <p class="text-gray-600 mb-3">Coloca los llaveros RFID en los bienes o productos que deseas proteger.</p>
-                  <div class="relative h-56 w-full rounded-lg overflow-hidden shadow-md">
-                    <img 
-                      src="{% static 'images/producto/llaverosRFID.jpg' %}" 
-                      alt="Llaveros RFID en productos" 
-                      class="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                    >
-                  </div>
-                </div>
-              </li>
-              
-              <li class="flex items-start gap-4">
-                <div class="flex-shrink-0 bg-gray-200 rounded-full p-2 flex items-center justify-center h-10 w-10">
-                  <span class="font-bold text-primary">3</span>
-                </div>
-                <div class="flex-1">
-                  <h3 class="font-bold mb-2">Configurar la conexión</h3>
-                  <p class="text-gray-600 mb-3">Configura la conexión del lector con la aplicación móvil.</p>
-                  <div class="relative h-56 w-full rounded-lg overflow-hidden shadow-md">
-                    <img 
-                      src="{% static 'images/producto/conexion.jpg' %}" 
-                      alt="Configuración de la conexión" 
-                      class="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                    >
-                  </div>
-                </div>
-              </li>
-              
-              <li class="flex items-start gap-4">
-                <div class="flex-shrink-0 bg-gray-200 rounded-full p-2 flex items-center justify-center h-10 w-10">
-                  <span class="font-bold text-primary">4</span>
-                </div>
-                <div class="flex-1">
-                  <h3 class="font-bold mb-2">Realizar pruebas</h3>
-                  <p class="text-gray-600 mb-3">Realiza pruebas para garantizar el correcto funcionamiento del sistema.</p>
-                  <div class="relative h-56 w-full rounded-lg overflow-hidden shadow-md">
-                    <img 
-                      src="{% static 'images/producto/implement.jpg' %}" 
-                      alt="Pruebas del sistema" 
-                      class="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                    >
-                  </div>
-                </div>
-              </li>
-            </ol>
-          </div>
-      </div>
-      
-      <!-- Manual de Usuario -->
-      <div class="bg-white rounded-xl shadow-md mb-8 overflow-hidden hover:shadow-lg transition-all duration-300">
-        <div class="bg-primary p-4">
-          <h2 class="text-xl font-semibold text-white">Manual de usuario</h2>
-        </div>
-        <div class="p-6">
-          <p class="text-gray-600 mb-4">En el manual de usuario encontrarás información detallada sobre:</p>
-          <ul class="list-disc pl-5 mt-3 text-gray-600 mb-6">
-            <li class="mb-2">✅ Requisitos previos para la instalación.</li>
-            <li class="mb-2">✅ Guía de uso del sistema.</li>
-            <li class="mb-2">✅ Configuración de la aplicación móvil.</li>
-            <li class="mb-2">✅ Solución de problemas.</li>
-          </ul>
-          
-          <a href="" class="download-btn group relative inline-flex items-center gap-2 px-4 py-2 border border-primary text-primary rounded-md hover:bg-blue-50 transition-all duration-300">
-            <span class="flex items-center gap-2 z-10">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 download-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-              </svg>
-              Descarga manual
-            </span>
-          </a>
-        </div>
-      </div>
-      
-      <!-- Términos y Condiciones -->
-      <div class="bg-white rounded-xl shadow-md mb-8 overflow-hidden hover:shadow-lg transition-all duration-300">
-        <div class="bg-primary p-4">
-          <h2 class="text-xl font-semibold text-white">Términos y Condiciones</h2>
-        </div>
-        <div class="p-6">
-          <p class="text-gray-600 mb-4">Lee atentamente los términos y condiciones antes de utilizar el sistema.</p>
-          <a href="" class="group inline-flex items-center gap-2 px-4 py-2 border border-primary text-primary rounded-md hover:bg-blue-50 transition-all duration-300">
-            <span>Leer más</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </a>
-        </div>
-      </div>
-      
-      <!-- Ventajas Competitivas -->
-      <div class="mb-8">
-        <h2 class="text-3xl font-semibold mb-6 text-center">Ventajas competitivas</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-            <div class="p-4 flex justify-center">
-              <div class="relative h-20 w-40">
-                <div class="absolute inset-0 bg-gray-200 rounded-full flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
               </div>
-            </div>
-            <div class="p-6 text-center">
-              <h3 class="text-xl font-semibold mb-2">Seguridad reforzada</h3>
-              <p class="text-gray-600">Detección en tiempo real de intentos de robo.</p>
-            </div>
           </div>
-          
-          <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-            <div class="p-4 flex justify-center">
-              <div class="relative h-20 w-40">
-                <div class="absolute inset-0 bg-gray-200 rounded-full flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                  </svg>
-                </div>
+  
+            <!-- Demo interactiva -->
+  <div class="mt-16 bg-colorF2 p-4 sm:p-8 rounded-lg shadow-md animate-fade-in">
+      <h3 class="text-2xl font-bold mb-4 sm:mb-6 text-primary text-center">Demostración interactiva</h3>
+      <div class="flex flex-col md:flex-row items-center justify-center">
+          <div class="w-full md:w-1/2 mb-6 md:mb-0 relative">
+              <div class="max-w-xs mx-auto relative">
+                  <img src="{% static 'images/producto/tienda.png' %}" alt="Tienda" id="store-image" class="rounded-lg shadow-md mx-auto h-auto w-full max-h-64 animate-scale">
+                  <div id="product" class="absolute top-1/2 left-1/4 w-8 h-8 bg-danger rounded-full cursor-pointer transform -translate-x-1/2 -translate-y-1/2" title="Producto con llavero RFID"></div>
+                  <div id="exit" class="absolute bottom-4 right-32 w-12 h-16 border-2 border-dashed border-danger rounded-lg transform translate-x-0" title="Salida con detector RFID">
+                      <div class="h-full flex items-center justify-center">
+                          <p class="text-danger font-bold text-xs sm:text-sm whitespace-nowrap">Salida</p>
+                      </div>
+                  </div>
               </div>
-            </div>
-            <div class="p-6 text-center">
-              <h3 class="text-xl font-semibold mb-2">Notificaciones instantáneas</h3>
-              <p class="text-gray-600">Alertas en tiempo real a la aplicación móvil.</p>
-            </div>
           </div>
-          
-          <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-            <div class="p-4 flex justify-center">
-              <div class="relative h-20 w-40">
-                <div class="absolute inset-0 bg-gray-200 rounded-full flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                  </svg>
-                </div>
+          <div class="w-full md:w-1/2 md:pl-0 lg:pl-8">
+              <div class="bg-white p-4 sm:p-6 rounded-lg shadow-md">
+                  <h4 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-primary">Simular el sistema</h4>
+                  <p class="mb-3 sm:mb-4 text-sm sm:text-base">Arrastra el producto (círculo rojo) hacia la salida para ver cómo funciona el sistema de alarma.</p>
+                  <div id="alarm-status" class="p-3 sm:p-4 bg-green-100 text-green-800 rounded-lg mb-3 sm:mb-4 text-sm sm:text-base">
+                      Estado: Sistema listo
+                  </div>
+                  <div id="notification-area" class="hidden p-3 sm:p-4 bg-danger text-white rounded-lg mb-3 sm:mb-4 animate-pulse">
+                      <div class="flex items-center">
+                          <i class="fas fa-exclamation-triangle mr-2"></i>
+                          <span class="font-bold text-sm sm:text-base">¡ALERTA DE SEGURIDAD!</span>
+                      </div>
+                      <p class="mt-1 sm:mt-2 text-xs sm:text-sm">Se ha detectado un intento de salida con un producto protegido.</p>
+                  </div>
+                  <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
+                      <button id="deactivate-btn" class="bg-secondary text-white py-2 px-4 rounded-lg hover:bg-opacity-90 transition text-sm sm:text-base w-full sm:w-auto btn-hover">
+                          Desactivar llavero
+                      </button>
+                      <button id="reset-btn" class="bg-gray-300 text-gray-800 py-2 px-4 rounded-lg hover:bg-gray-400 transition text-sm sm:text-base w-full sm:w-auto btn-hover">
+                          Reiniciar demo
+                      </button>
+                  </div>
               </div>
-            </div>
-            <div class="p-6 text-center">
-              <h3 class="text-xl font-semibold mb-2">Historial de eventos</h3>
-              <p class="text-gray-600">Accede a un registro detallado de todas las alertas.</p>
-            </div>
           </div>
-        </div>
       </div>
-    </div>
   </div>
+        </div>
+    </section>
+  
+    <!-- Implementación física -->
+    <section id="implementacion" class="py-16 bg-colorF">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary animate-fade-in">Implementación física del sistema</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover animate-fade-in">
+                    <img src="{% static "images/producto/componentes.png" %}" alt="Componentes del sistema" class="w-full h-48 object-cover animate-scale">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-primary">Componentes necesarios</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span><strong>Llaveros RFID:</strong> Dispositivos de seguridad que se adhieren a los productos.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span><strong>Lectores RFID:</strong> Instalados en las salidas para detectar los llaveros activos.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span><strong>Unidad de control:</strong> Cerebro del sistema que gestiona las alarmas y notificaciones.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span><strong>Aplicación móvil:</strong> Para recibir alertas y gestionar el sistema remotamente.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span><strong>*Desactivadores:</strong> Dispositivos para desactivar los llaveros en el punto de venta.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover animate-fade-in" style="animation-delay: 0.2s;">
+                    <img src="{% static "images/producto/colocacion.jpg" %}" alt="Instalación del sistema" class="w-full h-48 object-cover animate-scale">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-primary">Proceso de instalación</h3>
+                        <ol class="space-y-3">
+                            <li class="flex items-start">
+                                <div class="bg-secondary text-white rounded-full w-6 h-6 flex items-center justify-center mt-1 mr-3 flex-shrink-0">1</div>
+                                <span><strong>Evaluación del local:</strong> Análisis de las entradas, salidas y distribución del espacio.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-secondary text-white rounded-full w-6 h-6 flex items-center justify-center mt-1 mr-3 flex-shrink-0">2</div>
+                                <span><strong>Instalación de lector(es):</strong> Montaje de los detectores en las salidas del establecimiento.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-secondary text-white rounded-full w-6 h-6 flex items-center justify-center mt-1 mr-3 flex-shrink-0">4</div>
+                                <span><strong>Configuración del sistema:</strong> Programación de la unidad de control y conexión a la red.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-secondary text-white rounded-full w-6 h-6 flex items-center justify-center mt-1 mr-3 flex-shrink-0">5</div>
+                                <span><strong>Capacitación del personal:</strong> Formación sobre el uso del sistema y protocolos.</span>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+  
+            <!-- Plano de instalación -->
+            <div class="mt-12 bg-white p-4 sm:p-8 rounded-lg shadow-md animate-fade-in">
+              <h3 class="text-xl text-center sm:text-2xl font-bold mb-4 sm:mb-6 text-primary">Plano de instalación típico</h3>
+              <div class="flex flex-col md:flex-row items-start">
+                  <div class="w-full md:w-2/3 mb-8 md:mb-0">
+                      <div class="border-2 border-gray-300 rounded-lg p-2 sm:p-4 relative" id="floor-plan">
+                          <!-- Representación simplificada de un plano de tienda -->
+                          <div class="w-full h-48 sm:h-64 bg-colorF2 relative overflow-hidden">
+                              <!-- Entrada -->
+                              <div class="absolute top-1/2 left-0 w-12 sm:w-16 h-10 sm:h-12 border-2 border-gray-400 transform -translate-y-1/2 flex items-center justify-center animate-scale">
+                                  <span class="text-xs sm:text-sm">Entrada</span>
+                              </div>
+                              
+                              <!-- Salida con detector -->
+                              <div class="absolute top-1/2 right-0 w-12 sm:w-16 h-10 sm:h-12 border-2 border-secondary transform -translate-y-1/2 flex items-center justify-center bg-colorF2 animate-scale">
+                                  <i class="fas fa-wifi text-secondary text-xs sm:text-sm"></i>
+                                  <span class="text-xs sm:text-sm ml-1">Salida</span>
+                              </div>
+                              
+                              <!-- Cajas -->
+                              <div class="absolute bottom-4 left-1/4 w-20 sm:w-32 h-6 sm:h-8 bg-gray-300 rounded flex items-center justify-center animate-scale">
+                                  <i class="fas fa-cash-register text-gray-600 mr-1 text-xs sm:text-sm"></i>
+                                  <span class="text-xs sm:text-sm">Cajas</span>
+                              </div>
+                              
+                              <!-- Estanterías - Ajustadas para ser responsivas -->
+                              <div class="absolute top-1/4 left-1/4 w-16 sm:w-24 md:w-32 h-4 sm:h-6 bg-gray-300 rounded animate-scale"></div>
+                              <div class="absolute top-1/4 left-1/2 w-16 sm:w-24 md:w-32 h-4 sm:h-6 bg-gray-300 rounded transform -translate-x-1/2 animate-scale"></div>
+                              <div class="absolute top-1/2 left-1/4 w-16 sm:w-24 md:w-32 h-4 sm:h-6 bg-gray-300 rounded transform -translate-y-1/2 animate-scale"></div>
+                              <div class="absolute top-1/2 left-1/2 w-16 sm:w-24 md:w-32 h-4 sm:h-6 bg-gray-300 rounded transform -translate-x-1/2 -translate-y-1/2 animate-scale"></div>
+                              
+                              <!-- Unidad de control -->
+                              <div class="absolute top-4 right-4 w-8 sm:w-10 md:w-12 h-8 sm:h-10 md:h-12 bg-secondary rounded-full flex items-center justify-center text-white animate-pulse">
+                                  <i class="fas fa-server text-xs sm:text-sm md:text-base"></i>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="w-full md:w-1/3 md:pl-4 lg:pl-8">
+                      <h4 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-primary">Leyenda</h4>
+                      <ul class="space-y-1 sm:space-y-2">
+                          <li class="flex items-center">
+                              <div class="w-3 h-3 sm:w-4 sm:h-4 bg-secondary rounded-full mr-2"></div>
+                              <span class="text-sm sm:text-base">Unidad de control central</span>
+                          </li>
+                          <li class="flex items-center">
+                              <div class="w-3 h-3 sm:w-4 sm:h-4 border-2 border-secondary bg-colorF2 mr-2"></div>
+                              <span class="text-sm sm:text-base">Arcos detectores RFID</span>
+                          </li>
+                          <li class="flex items-center">
+                              <div class="w-3 h-3 sm:w-4 sm:h-4 bg-gray-300 rounded mr-2"></div>
+                              <span class="text-sm sm:text-base">Mobiliario y estanterías</span>
+                          </li>
+                          <li class="flex items-center">
+                              <i class="fas fa-wifi text-secondary mr-2 text-xs sm:text-sm"></i>
+                              <span class="text-sm sm:text-base">Zona de detección</span>
+                          </li>
+                      </ul>
+                      <p class="mt-3 sm:mt-4 text-xs sm:text-sm text-gray-600">
+                          El sistema requiere una conexión eléctrica estable y, opcionalmente, conexión a internet para las notificaciones remotas.
+                      </p>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </section>
+  
+    <!-- Descargas -->
+    <section id="descargas" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary animate-fade-in">Documentación y descargas</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-colorF2 rounded-lg p-8 shadow-md hover:shadow-lg transition card-hover animate-fade-in">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-book text-4xl text-secondary mr-4 icon-spin"></i>
+                        <h3 class="text-2xl font-bold text-primary">Manual de usuario</h3>
+                    </div>
+                    <p class="mb-6">Descargue nuestro completo manual de usuario con toda la información necesaria para operar el sistema de manera eficiente.</p>
+                    <div class="bg-white p-4 rounded-lg mb-6">
+                        <h4 class="font-bold mb-2 text-primary">El manual incluye:</h4>
+                        <ul class="space-y-1">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                                <span>Instrucciones detalladas de instalación</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                                <span>Guía de operación diaria</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                                <span>Solución de problemas comunes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                                <span>Mantenimiento preventivo</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                                <span>Especificaciones técnicas</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button id="download-manual" class="bg-secondary text-white py-3 px-6 rounded-lg shadow hover:bg-opacity-90 transition w-full flex items-center justify-center btn-hover">
+                        <i class="fas fa-download mr-2"></i>
+                        <a href="{% static 'pdf/manual-usuario-SIAR.pdf' %}" download="manual-usuario-SIAR.pdf" class="text-white">Descargar manual (PDF)</a>
+                    </button>
+                </div>
+                
+                <div class="bg-colorF2 rounded-lg p-8 shadow-md hover:shadow-lg transition card-hover animate-fade-in" style="animation-delay: 0.2s;">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-file-contract text-4xl text-secondary mr-4 icon-spin"></i>
+                        <h3 class="text-2xl font-bold text-primary">Términos y condiciones</h3>
+                    </div>
+                    <p class="mb-6">Consulte los términos y condiciones de uso de nuestro sistema de seguridad RFID, incluyendo garantías y soporte técnico.</p>
+                    <div class="bg-white p-4 rounded-lg mb-6">
+                        <h4 class="font-bold mb-2 text-primary">El documento incluye:</h4>
+                        <ul class="space-y-1">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                                <span>Condiciones de la licencia de uso</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                                <span>Política de garantía</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                                <span>Limitaciones de responsabilidad</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                                <span>Política de privacidad</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                                <span>Información de contacto y soporte</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button id="download-terms" class="bg-secondary text-white py-3 px-6 rounded-lg shadow hover:bg-opacity-90 transition w-full flex items-center justify-center btn-hover">
+                        <i class="fas fa-download mr-2"></i>
+                        <a href="{% static 'pdf/terminos-condiciones-SIAR.pdf' %}" download="terminos-condiciones-SIAR.pdf" class="text-white">Descargar términos (PDF)</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+  </body>
 
-<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/producto.js' %}"></script>
 {% endblock %}
