@@ -52,9 +52,10 @@ module.exports = {
                 danger: '#e76f51',
                 colorF: "#FFFDF2", // Crema
                 colorF2: "#E9F1FA", // azul claro
-            text: {
-                primary: "#EAEAEA", // Color para texto sobre fondo oscuro
-                secondary: "#333333", // Color para texto sobre fondo claro
+                dark: '#264653',
+                text: {
+                    primary: "#EAEAEA", // Color para texto sobre fondo oscuro
+                    secondary: "#333333", // Color para texto sobre fondo claro
             },
             },
             fontFamily: {
