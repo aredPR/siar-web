@@ -40,105 +40,168 @@
         <h2 class="text-3xl font-bold text-primary mb-8 pb-2 border-b-2 border-secondary inline-block">Componentes IoT</h2>
         
         <div class="mb-10">
-            <h3 class="text-2xl font-semibold text-secondary mb-6">Frontend (Hardware)</h3>
+            <h3 class="text-2xl font-semibold text-secondary mb-6">Hardware</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- RFID Keys -->
+                <!-- Arduino Uno -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
-                    <img src="{% static "images\tecnologia\llavero.jpg" %}" alt="Llaveros RFID" class="w-full h-48 object-cover">
+                    <img src="{% static 'images/tecnologia/arduino.jpg' %}" alt="Arduino Uno" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h4 class="text-xl font-semibold text-primary mb-2">Llaveros RFID</h4>
-                        <p class="text-gray-700">Dispositivos pasivos que contienen un chip y una antena para almacenar y transmitir datos de identificación de forma inalámbrica cuando se acercan a un lector RFID.</p>
+                        <h4 class="text-xl font-semibold text-primary mb-2">Arduino Uno</h4>
+                        <p class="text-gray-700">Microcontrolador que actúa como el cerebro del sistema IoT, procesando las señales de los sensores y controlando los actuadores según la lógica programada.</p>
                     </div>
                 </div>
-                
+    
+                <!-- RFID Keys -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
+                    <img src="{% static 'images/tecnologia/llavero.jpg' %}" alt="Llaveros RFID" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-primary mb-2">Llaveros RFID</h4>
+                        <p class="text-gray-700">Dispositivos pasivos con un chip y una antena que almacenan y transmiten datos de identificación de forma inalámbrica al acercarlos a un lector RFID.</p>
+                    </div>
+                </div>
+    
                 <!-- RFID Reader -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
-                    <img src="{% static "images\tecnologia\lector.jpg" %}" alt="Lector RFID" class="w-full h-48 object-cover">
+                    <img src="{% static 'images/tecnologia/lector.jpg' %}" alt="Lector RFID" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h4 class="text-xl font-semibold text-primary mb-2">Lector RFID</h4>
                         <p class="text-gray-700">Dispositivo que emite señales de radio para detectar y leer la información almacenada en los tags RFID cuando estos se encuentran dentro de su rango de operación.</p>
                     </div>
                 </div>
-                
-                <!-- Ultrasonic Sensor -->
+    
+                <!-- Protoboard -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
-                    <img src="{% static "images\tecnologia\OIP.jpeg" %}" alt="Sensor ultrasónico HC-SRO4" class="w-full h-48 object-cover">
+                    <img src="{% static 'images/tecnologia/proto.png' %}" alt="Protoboard" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h4 class="text-xl font-semibold text-primary mb-2">Sensor ultrasónico HC-SRO4</h4>
-                        <p class="text-gray-700">Sensor que utiliza ondas ultrasónicas para medir distancias. Emite pulsos y mide el tiempo que tarda el eco en regresar, permitiendo calcular la distancia a objetos.</p>
+                        <h4 class="text-xl font-semibold text-primary mb-2">Protoboard</h4>
+                        <p class="text-gray-700">Herramienta para la conexión física entre componentes. Permite crear circuitos sin necesidad de soldadura, mientras que los cables establecen las conexiones eléctricas necesarias.</p>
                     </div>
                 </div>
-                
-                <!-- Active Buzzer -->
+    
+                <!-- ESP32 -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
-                    <img src="{% static "images\tecnologia\buzzer.jpg" %}" alt="Buzzer Activo" class="w-full h-48 object-cover">
+                    <img src="{% static 'images/tecnologia/ESP.jpg' %}" alt="ESP32" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h4 class="text-xl font-semibold text-primary mb-2">Buzzer activo</h4>
-                        <p class="text-gray-700">Componente electrónico que genera sonidos cuando recibe una señal eléctrica. Utilizado para alertas audibles en el sistema.</p>
+                        <h4 class="text-xl font-semibold text-primary mb-2">ESP32</h4>
+                        <p class="text-gray-700">Microcontrolador de bajo costo con Wi-Fi y Bluetooth integrado, ideal para proyectos de IoT que requieren conectividad inalámbrica y procesamiento potente.</p>
                     </div>
                 </div>
-                
-                <!-- Relay Module -->
+    
+                <!-- Led Rojo -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
-                    <img src="{% static "images\tecnologia\relay.jpg" %}" alt="Módulo Relay - Relé 1 con Diodo 5V" class="w-full h-48 object-cover">
+                    <img src="{% static 'images/tecnologia/led rojo.jpeg' %}" alt="Led Rojo" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h4 class="text-xl font-semibold text-primary mb-2">Módulo Relay - Relé 1 con Diodo 5V</h4>
-                        <p class="text-gray-700">Interruptor controlado eléctricamente que permite activar o desactivar circuitos de mayor potencia mediante señales de bajo voltaje desde el microcontrolador.</p>
+                        <h4 class="text-xl font-semibold text-primary mb-2">Led rojo</h4>
+                        <p class="text-gray-700">Elemento de señalización que emite luz roja al recibir corriente eléctrica. Utilizado comúnmente para indicar estados o alertas en los sistemas IoT.</p>
                     </div>
                 </div>
-            
-                <!-- Power Supply -->
+    
+                <!-- Resistencias 220Ω y 1kΩ -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
-                    <img src="{% static "images\tecnologia\pila.jpg" %}" alt="Fuente de Alimentación" class="w-full h-48 object-cover">
+                    <img src="{% static 'images/tecnologia/resitencias.jpg' %}" alt="Resistencias 220Ω y 1kΩ" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h4 class="text-xl font-semibold text-primary mb-2">Fuente de alimentación</h4>
-                        <p class="text-gray-700">Proporciona la energía eléctrica necesaria para el funcionamiento de todos los componentes del sistema, con el voltaje y amperaje adecuados.</p>
+                        <h4 class="text-xl font-semibold text-primary mb-2">Resistencias 220Ω y 1kΩ</h4>
+                        <p class="text-gray-700">Componentes electrónicos que limitan el flujo de corriente en un circuito, protegiendo otros componentes y asegurando su correcto funcionamiento.</p>
                     </div>
                 </div>
-                
-                <!-- Cables and Protoboard -->
+    
+                <!-- Power Bank -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
-                    <img src="{% static "images\tecnologia\protoboard.jpg" %}" alt="Cables y Protoboard" class="w-full h-48 object-cover">
+                    <img src="{% static 'images/tecnologia/powerbank.jpeg' %}" alt="Power Bank" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h4 class="text-xl font-semibold text-primary mb-2">Cables y protoboard</h4>
-                        <p class="text-gray-700">Elementos para la conexión física entre componentes. La protoboard permite crear circuitos sin soldadura, mientras que los cables establecen las conexiones eléctricas.</p>
+                        <h4 class="text-xl font-semibold text-primary mb-2">Power Bank</h4>
+                        <p class="text-gray-700">Batería portátil que proporciona energía para alimentar dispositivos IoT, especialmente en proyectos que requieren movilidad o no cuentan con una fuente de energía constante.</p>
+                    </div>
+                </div>
+    
+                <!-- Cable Entrada C -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
+                    <img src="{% static 'images/tecnologia/entrada c.png' %}" alt="Cable Entrada C" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-primary mb-2">Cable entrada C</h4>
+                        <p class="text-gray-700">Cable utilizado para la conexión de dispositivos con puertos de entrada tipo C, comúnmente empleado en la carga o transferencia de datos.</p>
+                    </div>
+                </div>
+    
+                <!-- Caja de Contención -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
+                    <img src="{% static 'images/tecnologia/contenedor.jpg' %}" alt="Caja de Contención" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-primary mb-2">Caja de contención</h4>
+                        <p class="text-gray-700">Contenedor que sirve para alojar y proteger los componentes electrónicos de posibles daños, además de organizar de manera ordenada el sistema IoT.</p>
+                    </div>
+                </div>
+    
+                <!-- Tarjeta RFID -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
+                    <img src="{% static 'images/tecnologia/tarjeta.jpg' %}" alt="Tarjeta RFID" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-primary mb-2">Tarjeta RFID</h4>
+                        <p class="text-gray-700">Dispositivo que almacena información de identificación en un chip, utilizado junto con los lectores RFID para el acceso o registro de datos.</p>
+                    </div>
+                </div>
+    
+                <!-- Jumpers de Conexión -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
+                    <img src="{% static 'images/tecnologia/cables.jpeg' %}" alt="Jumpers de Conexión" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-primary mb-2">Jumpers de conexión</h4>
+                        <p class="text-gray-700">Cables flexibles con conectores en ambos extremos, ideales para realizar conexiones rápidas y fáciles entre componentes en una protoboard o placa de pruebas.</p>
                     </div>
                 </div>
             </div>
         </div>
         
         <div>
-            <h3 class="text-2xl font-semibold text-secondary mb-6">Backend (Software)</h3>
+            <h3 class="text-2xl font-semibold text-secondary mb-6">Software</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Arduino Uno -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
-                    <img src="{% static "images\tecnologia\arduino.jpg" %}" alt="Arduino Uno" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h4 class="text-xl font-semibold text-primary mb-2">Arduino Uno</h4>
-                        <p class="text-gray-700">Microcontrolador que actúa como el cerebro del sistema IoT, procesando las señales de los sensores y controlando los actuadores según la lógica programada.</p>
-                    </div>
-                </div>
-                
                 <!-- Arduino IDE -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
-                    <img src="{% static "images\tecnologia\arduinosoftware.jpeg" %}" alt="Arduino IDE" class="w-full h-48 object-cover">
+                    <img src="{% static 'images/tecnologia/arduinosoftware.jpeg' %}" alt="Arduino IDE" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h4 class="text-xl font-semibold text-primary mb-2">Arduino IDE</h4>
-                        <p class="text-gray-700">Entorno de desarrollo integrado utilizado para escribir, compilar y cargar el código en la placa Arduino. Facilita la programación del microcontrolador.</p>
+                        <p class="text-gray-700">Entorno de desarrollo integrado utilizado para escribir, compilar y cargar el código en la placa Arduino. Facilita la programación y gestión del microcontrolador.</p>
                     </div>
                 </div>
-                
-                <!-- RFID Libraries -->
+    
+                <!-- Bibliotecas RFID -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
-                    <img src="{% static "images\tecnologia\librerias.png" %}" alt="Bibliotecas RFID" class="w-full h-48 object-cover">
+                    <img src="{% static 'images/tecnologia/libr.jpeg' %}" alt="Bibliotecas RFID" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h4 class="text-xl font-semibold text-primary mb-2">Bibliotecas RFID</h4>
                         <p class="text-gray-700">Conjunto de funciones y clases predefinidas que simplifican la interacción con los lectores RFID, permitiendo leer y procesar la información de los tags de manera eficiente.</p>
                     </div>
                 </div>
+    
+                <!-- Librerías ESP32 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
+                    <img src="{% static 'images/tecnologia/fireesp.png' %}" alt="Librerías ESP32" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-primary mb-2">Librerías ESP32</h4>
+                        <p class="text-gray-700">Conjunto de funciones y clases predefinidas que simplifican el desarrollo de aplicaciones para el microcontrolador ESP32, facilitando su interacción con otros dispositivos y tecnologías.</p>
+                    </div>
+                </div>
+    
+                <!-- Librerías Wi-Fi -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
+                    <img src="{% static 'images/tecnologia/libr.jpeg' %}" alt="Librerías Wi-Fi" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-primary mb-2">Librerías Wi-Fi</h4>
+                        <p class="text-gray-700">Herramientas de software que facilitan la conexión y configuración de dispositivos IoT a redes Wi-Fi, permitiendo la comunicación de datos entre componentes.</p>
+                    </div>
+                </div>
+    
+                <!-- Firebase Realtime Database -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
+                    <img src="{% static 'images/tecnologia/firereal.png' %}" alt="Firebase Realtime Database" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-primary mb-2">Firebase Realtime Database</h4>
+                        <p class="text-gray-700">Base de datos en tiempo real que permite almacenar y sincronizar datos de forma instantánea entre dispositivos conectados, ideal para aplicaciones IoT que requieren actualizaciones en vivo.</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </section>    
     
     <!-- Web Section -->
     <section id="web-section" class="mb-16">
@@ -147,12 +210,21 @@
         <div class="mb-10">
             <h3 class="text-2xl font-semibold text-secondary mb-6">Frontend</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Web Frontend -->
+                <!-- Interfaz Web -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
-                    <img src="{% static "images\tecnologia\html.jpg" %}" alt="Interfaz Web" class="w-full h-48 object-cover">
+                    <img src="{% static 'images/tecnologia/html.jpg' %}" alt="Interfaz Web" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h4 class="text-xl font-semibold text-primary mb-2">Interfaz web</h4>
-                        <p class="text-gray-700">Interfaz de usuario desarrollada con HTML, CSS y JavaScript que permite a los usuarios interactuar con el sistema a través de un navegador web.</p>
+                        <h4 class="text-xl font-semibold text-primary mb-2">Interfaz Web</h4>
+                        <p class="text-gray-700">Interfaz de usuario desarrollada con HTML, CSS y JavaScript, proporcionando un diseño atractivo y funcional que permite a los usuarios interactuar con el sistema a través de un navegador web.</p>
+                    </div>
+                </div>
+
+                <!-- Tailwind CSS -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
+                    <img src="{% static 'images/tecnologia/tailwind.jpg' %}" alt="Tailwind CSS" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-primary mb-2">Tailwind CSS</h4>
+                        <p class="text-gray-700">Framework de diseño de interfaz web que utiliza clases de utilidad para crear diseños personalizados de forma rápida y eficiente. Facilita el desarrollo de interfaces altamente responsivas y visualmente atractivas.</p>
                     </div>
                 </div>
             </div>
@@ -161,26 +233,36 @@
         <div>
             <h3 class="text-2xl font-semibold text-secondary mb-6">Backend</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Google Authentication -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
+                    <img src="{% static 'images/tecnologia/gogle.png' %}" alt="Google Authentication" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-primary mb-2">Google Authentication</h4>
+                        <p class="text-gray-700">Servicio de autenticación proporcionado por Google que permite a los usuarios iniciar sesión de manera segura y sencilla mediante sus cuentas de Google, mejorando la experiencia de usuario y la seguridad.</p>
+                    </div>
+                </div>
+
                 <!-- Python/Django -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
-                    <img src="{% static "images\tecnologia\django.jpeg" %}" alt="Python/Django" class="w-full h-48 object-cover">
+                    <img src="{% static 'images/tecnologia/django.jpeg' %}" alt="Python/Django" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h4 class="text-xl font-semibold text-primary mb-2">Python/Django</h4>
-                        <p class="text-gray-700">Framework de desarrollo web en Python que proporciona una estructura robusta para crear aplicaciones web. Gestiona la lógica del servidor, la autenticación y la interacción con la base de datos.</p>
+                        <p class="text-gray-700">Framework de desarrollo web basado en Python, que ofrece una estructura robusta para crear aplicaciones web seguras, eficientes y escalables. Facilita la gestión del servidor, autenticación de usuarios y bases de datos.</p>
                     </div>
                 </div>
                 
                 <!-- Firebase (for Web) -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
-                    <img src="{% static "images\tecnologia\firebase.png" %}" alt="Firebase (Web)" class="w-full h-48 object-cover">
+                    <img src="{% static 'images/tecnologia/firebase.png' %}" alt="Firebase (Web)" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h4 class="text-xl font-semibold text-primary mb-2">Firebase (Web)</h4>
-                        <p class="text-gray-700">Plataforma de desarrollo que proporciona servicios como base de datos en tiempo real, autenticación de usuarios y almacenamiento en la nube para la aplicación web.</p>
+                        <p class="text-gray-700">Plataforma de desarrollo que proporciona herramientas como base de datos en tiempo real, autenticación de usuarios y almacenamiento en la nube, facilitando la creación de aplicaciones web modernas y escalables.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     
     <!-- Mobile Section -->
     <section id="mobile-section" class="mb-16">
@@ -189,40 +271,95 @@
         <div class="mb-10">
             <h3 class="text-2xl font-semibold text-secondary mb-6">Frontend</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Flutter -->
+                
+                <!-- Dart -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
-                    <img src="{% static "images\tecnologia\flutter-logo.png" %}" alt="Flutter" class="w-full h-48 object-cover">
+                    <img src="{% static 'images/tecnologia/dartjpeg.jpeg' %}" alt="Dart" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h4 class="text-xl font-semibold text-primary mb-2">Flutter</h4>
-                        <p class="text-gray-700">Framework de UI de Google para crear aplicaciones nativas para móvil, web y escritorio desde una única base de código. Proporciona widgets personalizables para crear interfaces de usuario atractivas.</p>
+                        <h4 class="text-xl font-semibold text-primary mb-2">Dart - Flutter</h4>
+                        <p class="text-gray-700">Lenguaje de programación desarrollado por Google, utilizado principalmente con Flutter para crear aplicaciones móviles y de escritorio de alto rendimiento con una única base de código.</p>
                     </div>
                 </div>
                 
-                <!-- Mobile App -->
+                <!-- Firebase Storage -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
-                    <img src="{% static "images\tecnologia\movil.png" %}" alt="App Móvil" class="w-full h-48 object-cover">
+                    <img src="{% static 'images/tecnologia/storage.jpeg' %}" alt="Firebase Storage" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h4 class="text-xl font-semibold text-primary mb-2">App móvil</h4>
-                        <p class="text-gray-700">Aplicación para dispositivos móviles que permite a los usuarios interactuar con el sistema IoT de forma remota, recibir notificaciones y controlar dispositivos.</p>
+                        <h4 class="text-xl font-semibold text-primary mb-2">Firebase Storage</h4>
+                        <p class="text-gray-700">Servicio de almacenamiento en la nube de Firebase que permite a las aplicaciones móviles guardar y gestionar archivos de forma segura, escalable y en tiempo real.</p>
                     </div>
                 </div>
+                
+                {% comment %} <!-- App móvil -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
+                    <img src="{% static 'images/tecnologia/movil.png' %}" alt="App Móvil" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-primary mb-2">App Móvil</h4>
+                        <p class="text-gray-700">Aplicación para dispositivos móviles que permite a los usuarios interactuar con el sistema IoT de forma remota, recibir notificaciones y controlar dispositivos.</p>
+                    </div>
+                </div> {% endcomment %}
             </div>
         </div>
         
         <div>
             <h3 class="text-2xl font-semibold text-secondary mb-6">Backend</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Flutter -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
+                    <img src="{% static 'images/tecnologia/flutter-logo.png' %}" alt="Flutter" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-primary mb-2">Flutter</h4>
+                        <p class="text-gray-700">Framework de UI de Google para crear aplicaciones nativas para móvil, web y escritorio desde una única base de código. Proporciona widgets personalizables para crear interfaces de usuario atractivas.</p>
+                    </div>
+                </div>
                 <!-- Firebase (for Mobile) -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
-                    <img src="{% static "images\tecnologia\servi.jpeg" %}" class="w-full h-48 object-cover">
+                    <img src="{% static 'images/tecnologia/servi.jpeg' %}" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h4 class="text-xl font-semibold text-primary mb-2">Firebase</h4>
-                        <p class="text-gray-700">Proporciona servicios backend para la aplicación móvil, incluyendo base de datos en tiempo real, autenticación, notificaciones push y análisis de uso.</p>
+                        <p class="text-gray-700">Plataforma backend de Google que ofrece servicios como base de datos en tiempo real, autenticación de usuarios, notificaciones push y más, para aplicaciones móviles.</p>
+                    </div>
+                </div>
+
+                <!-- Google Authentication -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
+                    <img src="{% static 'images/tecnologia/gogle.png' %}" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-primary mb-2">Google Authentication</h4>
+                        <p class="text-gray-700">Servicio de autenticación de Google que permite integrar el inicio de sesión en tus aplicaciones móviles utilizando las cuentas de Google de los usuarios de forma rápida y segura.</p>
+                    </div>
+                </div>
+
+                <!-- Firebase (Dart/Flutter) -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
+                    <img src="{% static 'images/tecnologia/dartjpeg.jpeg' %}" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-primary mb-2">Dart</h4>
+                        <p class="text-gray-700">Uso combinado de Dart (para aplicaciones móviles) y Firebase (para backend) para crear aplicaciones móviles completas que gestionan datos, autenticación y almacenamiento en la nube.</p>
+                    </div>
+                </div>
+
+                <!-- Firebase Authentication -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
+                    <img src="{% static 'images/tecnologia/aut.jpeg' %}" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-primary mb-2">Firebase Authentication</h4>
+                        <p class="text-gray-700">Servicio de autenticación de Firebase que permite gestionar el registro e inicio de sesión de los usuarios mediante múltiples métodos como email, Google, Facebook, etc.</p>
+                    </div>
+                </div>
+
+                <!-- Firebase Cloud Functions -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 card-hover">
+                    <img src="{% static 'images/tecnologia/cloud.png' %}" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-primary mb-2">Firebase Cloud Functions</h4>
+                        <p class="text-gray-700">Funciones en la nube de Firebase que permiten ejecutar código backend sin necesidad de administrar servidores, útil para realizar tareas como la gestión de notificaciones y la ejecución de procesos en segundo plano.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 </main>
 
 <script src="{% static 'js/tecnologia.js' %}"></script>
